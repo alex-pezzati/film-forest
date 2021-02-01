@@ -36,4 +36,4 @@ Review table info -
 
 Dashboard table info -
 * userId references model: users
-* movieId references model: movies
+*   movieId references model: movies
