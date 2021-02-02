@@ -3,6 +3,7 @@ const router = express.Router();
 const bcrypt = require('bcryptjs')
 const csrf = require('csurf')
 const db = require('../db/models')
+    // const { User } = db
 const { check, validationResult } = require('express-validator')
 const { loginUser, logoutUser } = require('../auth')
 
@@ -64,8 +65,8 @@ router.post('/register', csrfProtection, userValidators, asyncHandler(async(req,
     const validatorErrors = validationResult(req);
 
     if (validatorErrors.isEmpty()) {
-        const hashedPassword = await bcrypt.hash(password, 10);
-        user.password = hashedPassword;
+        const tempPassword = await bcrypt.hash(password, 10);
+        user.hashedPassword = tempPassword;
         await user.save();
         loginUser(req, res, user);
         res.redirect('/'); //! WE DONT HAVE A HOME YET
@@ -103,10 +104,10 @@ router.post('/login', csrfProtection, loginValidators, asyncHandler(async(req, r
     const validatorErrors = validationResult(req);
 
     if (validatorErrors.isEmpty()) {
-        const user = await db.User.findOne({ where: { email } });
+        const user = await User.findOne({ where: { email } });
 
         if (user !== null) {
-            const passwordMatch = await bcrypt.compare(password, user.password.toString());
+            const passwordMatch = await bcrypt.compare(password, user.hashedPassword.toString());
 
             if (passwordMatch) {
                 loginUser(req, res, user);
