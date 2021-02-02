@@ -48,10 +48,15 @@ const userValidators = [
     check('password')
     .exists({ checkFalsy: true })
     .withMessage('Please provide a value for Password')
+    .isLength({ min: 6 })
+    .withMessage('Password must not be shorter than 6 characters long, ya jerk')
     .isLength({ max: 12 })
     .withMessage('Password must not be more than 12 characters long'),
+
+    // implement this once we have legit seed users and feel like making real passwords, nah meen?
     // .matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])/, 'g')
     // .withMessage('Password must contain at least 1 lowercase letter, uppercase letter, number, and special character (i.e. "!@#$%^&*")'),
+
     check('dateOfBirth')
     .exists({ checkFalsy: true })
     .withMessage('Please provide a valid date of birth.')
