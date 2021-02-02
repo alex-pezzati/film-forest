@@ -3,12 +3,14 @@ module.exports = (sequelize, DataTypes) => {
   const User = sequelize.define('User', {
     firstName: DataTypes.STRING,
     lastName: DataTypes.STRING,
-    dateOfBirth: DataTypes.DATE,
-    password: DataTypes.STRING,
-    email: DataTypes.STRING
+    hashedPassword: DataTypes.STRING,
+    emailAddress: DataTypes.STRING,
+    dateOfBirth: DataTypes.STRING
   }, {});
   User.associate = function(models) {
-    // associations can be defined here
+    User.hasMany(models.Review, {foreignKey: 'userId'})
+    User.hasMany(models.Vote, {foreignKey: 'userId'})
+    User.hasOne(models.Dashboard, {foreignKey: 'userId'})
   };
   return User;
 };
