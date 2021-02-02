@@ -69,7 +69,11 @@ router.post('/register', csrfProtection, userValidators, asyncHandler(async(req,
         user.hashedPassword = tempPassword;
         await user.save();
         loginUser(req, res, user);
-        res.redirect('/'); //! WE DONT HAVE A HOME YET
+
+        return req.session.save(() => {
+            res.redirect('/'); //! WE DONT HAVE A HOME YET
+        })
+
     } else {
         const errors = validatorErrors.array().map((error) => error.msg);
         res.render('user-register', {
@@ -111,7 +115,7 @@ router.post('/login', csrfProtection, loginValidators, asyncHandler(async(req, r
 
             if (passwordMatch) {
                 loginUser(req, res, user);
-                return res.redirect('/')
+                return req.session.save(() => { res.redirect('/') });
             }
         }
         errors.push('Login failed, please check credentials')
