@@ -1,1 +1,18 @@
 extends layout.pug
+block Content
+    form(method="POST" action="/user/register")
+    div 
+        label First Name
+        input(type='text' name='firstName')
+    div 
+        label Last Name
+        input(type='text' name='lastName')
+    div 
+        label Date Of Birth
+        input(type='date' name='dateOfBirth')
+    div 
+        label Email
+        input(type='text' name='email')
+    div 
+        label Password
+        input(type='password' name='password')
