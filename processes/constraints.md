@@ -18,6 +18,7 @@ Dashboards table info -
 * Id serial PK unique notnull
 * upvoteRating - boolean
 * downvoteRating - boolean
+* userId references model: users
 * movieId references model: movies
     * Associations a vote hasOne movie, belongsTo one user
 
