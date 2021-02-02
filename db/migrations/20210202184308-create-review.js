@@ -1,27 +1,24 @@
 'use strict';
 module.exports = {
-	up: (queryInterface, Sequelize) => {
-		return queryInterface.createTable('votes', {
+  up: (queryInterface, Sequelize) => {
+    return queryInterface.createTable('Reviews', {
 			id: {
 				allowNull: false,
 				autoIncrement: true,
 				primaryKey: true,
 				type: Sequelize.INTEGER,
 			},
-			upvoteRating: {
-				type: Sequelize.BOOLEAN,
-			},
-			downvoteRating: {
-				type: Sequelize.BOOLEAN,
+			review: {
+				type: Sequelize.STRING(500),
 			},
 			userId: {
 				allowNull: false,
-				references: { model: 'users' },
+				references: { model: 'Users' },
 				type: Sequelize.INTEGER,
 			},
 			movieId: {
 				allowNull: false,
-				references: { model: 'movies' },
+				references: { model: 'Movies' },
 				type: Sequelize.INTEGER,
 			},
 			createdAt: {
@@ -33,8 +30,8 @@ module.exports = {
 				type: Sequelize.DATE,
 			},
 		});
-	},
-	down: (queryInterface, Sequelize) => {
-		return queryInterface.dropTable('votes');
-	},
+  },
+  down: (queryInterface, Sequelize) => {
+    return queryInterface.dropTable('Reviews');
+  }
 };

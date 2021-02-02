@@ -1,20 +1,21 @@
 'use strict';
 module.exports = {
-	up: (queryInterface, Sequelize) => {
-		return queryInterface.createTable('dashboards', {
+  up: (queryInterface, Sequelize) => {
+    return queryInterface.createTable('MoviesDashboards', {
 			id: {
 				allowNull: false,
 				autoIncrement: true,
 				primaryKey: true,
 				type: Sequelize.INTEGER,
 			},
-			name: {
+			dashboardId: {
 				allowNull: false,
-				type: Sequelize.TEXT(50),
+				references: { model: 'Dashboards' },
+				type: Sequelize.INTEGER,
 			},
-			userId: {
+			movieId: {
 				allowNull: false,
-				references: { model: 'users' },
+				references: { model: 'Movies' },
 				type: Sequelize.INTEGER,
 			},
 			createdAt: {
@@ -26,8 +27,8 @@ module.exports = {
 				type: Sequelize.DATE,
 			},
 		});
-	},
-	down: (queryInterface, Sequelize) => {
-		return queryInterface.dropTable('dashboards');
-	},
+  },
+  down: (queryInterface, Sequelize) => {
+    return queryInterface.dropTable('MoviesDashboards');
+  }
 };
