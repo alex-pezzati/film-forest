@@ -1,55 +1,46 @@
-User table info -
-* Id serial notnull PK unique
+Users table info -
+* Id serial PK unique notnull
 * firstName - text(50) notnull
 * lastName - text(50) notnull
-* dateOfBirth - text(50) notnull
+* hashedPassword - string.binary notnull
 * emailAddress - text(50) notnull CHECK (emailAddress = *@*)
-    * Associations - a user hasMany movies, hasMany reviews, belongsTo a dashboard
+* dateOfBirth - date notnull
+    * Associations - a user hasMany votes, hasMany reviews, a user hasOne dashboard
 
-Dashboard table info -
-* Id serial notnull PK unique
-* name
-* wantToWatch - boolean
-* haveWatched - boolean
-* unreviewed - boolean
+Dashboards table info -
+* Id serial PK unique notnull
+* name text(50)
 * userId references model: users
-*   movieId references model: movies
-* $1, wantToWatch, $1
-
-`JOIN TABLE` Watch table info -
-* Id serial notnull PK unique
-* review
-* dashboardId references model: users
 * movieId references model: movies
-    * associations a watchTable has many movies, hasMany dashboards
+    * Associations - a dashboard has many moviesDashboards, a dashboard belongsTo a user
 
-PK  Dashboard   Movie
-$1, $1,         $1
-$2, $1,         $2
-
-  example query
-select movie
-from watchtable
-where dashboard = 1
-
+`JOIN TABLE` Votes table info -
+* Id serial PK unique notnull
+* upvoteRating - boolean
+* downvoteRating - boolean
+* userId references model: users
+* movieId references model: movies
+    * Associations a vote hasOne movie, belongsTo one user
 
 Movie table info -
-* Id serial notnull PK unique
+* Id serial  PK unique notnull
 * title - text(50) notnull
 * genre - text(20) notnull
-* releaseDate - text(50) notnull
+* releaseDate - date notnull
 * description - text(500) notnull
 * totalRating - integer notnull
-* movieUpvote - boolean notnull
-* movieDownvote - boolean notnull
 * userId references model: users
 * reviewId references model: reviews
-   * associations - a movie hasMany users, hasMany reviews
+   * Associations - hasMany reviews, hasMany votes, hasMany moviesDashboards
 
-Review table info -
-* Id serial notnull PK unique
-* reviewBody - text(500) notnull
-* reviewUpvote - boolean
-* reveiwDownvote - boolean
+`JOIN TABLE` Reviews table info -
+* Id serial PK unique notnull
+* review - text(500) notnull
 * userId references model: users
-  *  associations - a review belongsTo a user
+* movieId references mode: movies
+  *  Associations - a review belongsTo a user, a review hasOne movie
+
+`JOIN TABLE` MoviesDashboards table info -
+* dashboardId references model: dashboards
+* moviesId references model: movies
+  * Associations - belongsTo movies, belongsTo dashboards
