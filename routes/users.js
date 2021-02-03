@@ -1,22 +1,24 @@
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs')
-const csrf = require('csurf')
 const db = require('../db/models')
-    // const { User } = db
-const { check, validationResult } = require('express-validator')
-const { loginUser, logoutUser } = require('../auth')
 
-const csrfProtection = csrf({ cookie: true })
-const asyncHandler = (handler) => (req, res, next) => handler(req, res, next).catch(next)
+const { check, validationResult } = require('express-validator')
+const { loginUser, logoutUser } = require('../auth');
+const { asyncHandler, csrfProtection } = require('./utils.js');
+
 
 router.get('/register', csrfProtection, (req, res) => {
     const user = db.User.build()
-    res.render('user-register', {
-        title: 'Register',
-        user,
-        csrfToken: req.csrfToken()
-    })
+    if (res.locals.authenticated === true) {
+        res.redirect('/dashboard')
+    } else {
+        res.render('user-register', {
+            title: 'Register',
+            user,
+            csrfToken: req.csrfToken()
+        }
+    )}
 })
 
 const userValidators = [
@@ -91,10 +93,14 @@ router.post('/register', csrfProtection, userValidators, asyncHandler(async(req,
 }))
 
 router.get('/login', csrfProtection, (req, res) => {
-    res.render('user-login', {
-        title: 'Login',
-        csrfToken: req.csrfToken(),
-    })
+    if (res.locals.authenticated === true) {
+        res.redirect('/dashboard')
+    } else {
+        res.render('user-login', {
+            title: 'Login',
+            csrfToken: req.csrfToken(),
+        })
+    }
 })
 
 const loginValidators = [
