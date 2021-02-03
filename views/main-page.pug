@@ -1,13 +1,16 @@
 extends layout.pug
 
 block content
-    table
-        thead
-            tr
-                th Movie Title
-                th Rating
-        tbody
-            each movie in movies
+    div(class='table-container')
+        table(class='movie-table')
+            thead
                 tr
-                    td= movie.title
-                    td= movie.totalRating
+                    th(scope='Movie-Title') Movie Title
+                    th(scope='Genre') Genre
+                    th(scope='Rating') Rating
+            tbody
+                each movie in movies
+                    tr
+                        td= movie.title
+                        td= movie.genre
+                        td= movie.totalRating
