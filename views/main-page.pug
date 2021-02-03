@@ -1,11 +1,11 @@
 extends layout.pug
 
 block content
-    table
-        thead
+    table(class='')
+        thead(class='thead-dark')
             tr
-                th Movie Title
-                th Rating
+                th(scope='col') Movie Title
+                th(scope='col') Rating
         tbody
             each movie in movies
                 tr

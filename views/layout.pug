@@ -13,14 +13,14 @@ html
           button(type='submit' href='/users/login' ) Login
           button(href='/users/register') Register
   body
-    nav
-      div
-        ul
-          if locals.authenticated
-            form(action='/users/logout' method='post')
-              button(type='submit') Logout
-          else
-            span
-              a(href='/users/login') Login
-              a(href='/users/register') Register
-    block content
+  //-   nav
+  //-     div
+  //-       ul
+  //-         if locals.authenticated
+  //-           form(action='/users/logout' method='post')
+  //-             button(type='submit') Logout
+  //-         else
+  //-           span
+  //-             a(href='/users/login') Login
+  //-             a(href='/users/register') Register
+  block content

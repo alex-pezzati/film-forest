@@ -6,25 +6,21 @@ body {
 }
 
 nav {
-  background: linear-gradient(to right,#f13820, #f17420);
+  margin-left: -10px;
+  margin-right: -10px;
+  background-image: url('../images/5341781-vector-old-celluloid-film-tape.PNG');
+  /*  url('../images/film-strip-773972.PNG');*/
+  background-size: contain;
+  /* background: linear-gradient(to right,#f13820, #f17420); */
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   display: flex;
   justify-content: space-around;
 }
 
-.nav ul {
-  margin: 10px 0 5px;
-}
-
-.nav li {
-  display: inline;
-  padding-right: 5px;
-  padding-top: 15px;
-}
-
 button {
-  margin: 1em;
-  border-radius: 10px;
+  margin: 1.5em 0.5em;
+  border-radius: 7.5px;
+  cursor: pointer;
 }
 
 div {
@@ -33,8 +29,7 @@ div {
 }
 
 h1 {
-  color: #000000;
-  text-align: center;
+  color: #f17420;
   font-size: 1.5em;
   font-style: oblique;
   font-weight: 900;
@@ -50,18 +45,25 @@ a {
   box-sizing: border-box;
 }
 
-
-
-.grid__container {
-  display: grid;
+/* .grid__container {
+display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: auto;
   grid-template-areas:
+  "col col"
+  "tr tr"
 }
 
 .grid__section {
   border: 1px solid #333333;
 }
+
+.grid__section-1 {
+  grid-area: col;
+}
+.grid__section-2 {
+  grid-area: tr;
+} */
 
 /* h1, h2, h3, h4, h5, h6, a, ol, li, ul, div, span,
 body, header, nav {
