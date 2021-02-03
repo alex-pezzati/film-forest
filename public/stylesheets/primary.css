@@ -1,6 +1,6 @@
 body {
     /* background-image: url('../images/GettyImages-1146804505.PNG');*/
-    background-color: rgb(210, 187, 168);
+    background-color: #ffffff;
     background-repeat: no-repeat;
     background-size: cover;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -51,23 +51,20 @@ a {
     box-sizing: border-box;
 }
 
-.table-container {
+/* .table-container {
     display: flex;
     justify-content: center;
-}
-
-.movie-table {
-    background-color: whitesmoke;
-}
+} */
 
 
-/* 
+
+
 .table-container {
     background-color: whitesmoke;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-columns: auto;
-    grid-template-areas: "header" "Movie-Title Rating Genre"
+    grid-template-areas: "header header header" "movies "
 }
 
 .grid__section {
@@ -76,15 +73,14 @@ a {
 
 .grid__section-1 {
     grid-area: header;
-    /* grid-column-start: 1;
-    grid-column-end: 3; 
 }
 
-.grid__section-2 {
-    grid-area: Movie-Title;
+.grid__section-2 .movie-table {
+    background-color: #f4f1Ea;
+    grid-area: movies;
 }
 
-.grid__section-3 {
+/* .grid__section-3 {
     grid-area: Genre;
 }
 
