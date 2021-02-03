@@ -1,19 +1,9 @@
-nav {
-  background: linear-gradient(to right,#f13820, #f17420);
-  padding: 5px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  text-align: end;
-}
-
 body {
-  background-image: '/home/melody/appAcademy/pairing/public/images/forest_background.jpg';
-  margin: 0px;
-  padding: 10px;
+  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  padding: 5px;
   color: #00B7FF;
 }
 
@@ -21,16 +11,7 @@ a {
   box-sizing: border-box;
 }
 
-div {
-  margin-top: 10px;
-  padding: 5px;
-}
-
-button {
-  margin-left: 10px;
-}
-
-/* h1, h2, h3, h4, h5, h6, a, ol, li, ul, div, span,
+h1, h2, h3, h4, h5, h6, a, ol, li, ul, div, span,
 body, header, nav {
   font-size: 1rem;
   color: inherit;
@@ -39,7 +20,7 @@ body, header, nav {
   padding: 0;
   outline: 0;
   font-weight: normal;
-} */
+}
 
 h1 {
   font-size: 2rem;
