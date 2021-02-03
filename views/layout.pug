@@ -2,8 +2,16 @@ doctype html
 html
   head
       block head
-        title="Express Starter App"
-        link(rel='stylesheet' href='/stylesheets/reset.css')
+        title= "Film Forest"
+        link(rel='stylesheet' href='/stylesheets/primary.css')
+  nav
+        if locals.authenticated
+          form(action='/users/logout' method='post')
+            button(type='submit') Logout
+        else
+          h1 Welcome to Film Forest
+          button(type='submit' href='/users/login' ) Login
+          button(href='/users/register') Register
   body
     nav
       div
