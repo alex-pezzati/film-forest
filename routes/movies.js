@@ -11,9 +11,10 @@ const router = express.Router()
 
 router.get('/:id(\\d+)', asyncHandler(async (req, res) => {
     const movieId = req.params.id
-    const movie = await Movie.findByPk( movieId)
+    const movie = await Movie.findByPk( movieId, { incldue: Review } )
     res.render('movie', { title: movie.title, movie })
 }))
+
 
 router.post('/:id(\\d+)', asyncHandler(async (req, res)=> {
     const movieId = req.params.id

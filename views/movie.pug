@@ -12,6 +12,6 @@ block content
       form(method='post' action=`/movies/${movie.id}`)
         input(type='text' name='review')
         button(type='submit') Submit Review
-    //- div(class='reviews-div')
-    //-   div(class='movie-reviews')= movie.Review.review
+    div(class='reviews-div')
+      div(class='movie-reviews')= movie.Review.review
       
