@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
         genre: DataTypes.STRING,
         releaseDate: DataTypes.DATE,
         description: DataTypes.STRING,
-        totalRating: DataTypes.INTEGER
+        totalRating: DataTypes.NUMERIC
     }, {});
     Movie.associate = function(models) {
         Movie.hasMany(models.Review, { foreignKey: 'moviesId' });

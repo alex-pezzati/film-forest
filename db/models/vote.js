@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
     movieId: DataTypes.INTEGER
   }, {});
   Vote.associate = function(models) {
-		Vote.hasOne(models.Movie, { foreignKey: 'movieId' });
+		Vote.belongsTo(models.Movie, { foreignKey: 'movieId' });
     Vote.belongsTo(models.User, { foreignKey: 'userId' });
   };
   return Vote;

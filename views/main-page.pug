@@ -1,0 +1,13 @@
+extends layout.pug
+
+block content
+    table
+        thead
+            tr
+                th Movie Title
+                th Rating
+        tbody
+            each movie in movies
+                tr
+                    td= movie.title
+                    td= movie.totalRating
