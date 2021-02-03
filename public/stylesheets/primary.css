@@ -1,69 +1,97 @@
 body {
-  background-image: url('../images/GettyImages-1146804505.PNG');
-  background-repeat: no-repeat;
-  background-size: cover;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    /* background-image: url('../images/GettyImages-1146804505.PNG');*/
+    background-color: rgb(210, 187, 168);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 nav {
-  margin-left: -10px;
-  margin-right: -10px;
-  background-image: url('../images/5341781-vector-old-celluloid-film-tape.PNG');
-  /*  url('../images/film-strip-773972.PNG');*/
-  background-size: contain;
-  /* background: linear-gradient(to right,#f13820, #f17420); */
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  display: flex;
-  justify-content: space-around;
+    margin-left: -10px;
+    margin-right: -10px;
+    background-image: url('../images/5341781-vector-old-celluloid-film-tape.PNG');
+    /*  url('../images/film-strip-773972.PNG');*/
+    background-size: contain;
+    /* background: linear-gradient(to right,#f13820, #f17420); */
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: space-around;
 }
 
 button {
-  margin: 1.5em 0.5em;
-  border-radius: 7.5px;
-  cursor: pointer;
+    margin: 1.5em 0.5em;
+    border-radius: 7.5px;
+    cursor: pointer;
 }
 
 div {
-  margin-top: 10px;
-  padding: 5px;
+    margin-top: 10px;
+    padding: 5px;
 }
 
 h1 {
-  color: #f17420;
-  font-size: 1.5em;
-  font-style: oblique;
-  font-weight: 900;
+    color: #f17420;
+    font-size: 1.5em;
+    font-style: oblique;
+    font-weight: 900;
+}
 
+button a {
+    padding: 5px;
+    color: #000000;
+    text-decoration-line: none;
 }
 
 a {
-  padding: 5px;
-  color: #00B7FF;
+    padding: 5px;
+    color: #00B7FF;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-/* .grid__container {
-display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: auto;
-  grid-template-areas:
-  "col col"
-  "tr tr"
+.table-container {
+    display: flex;
+    justify-content: center;
+}
+
+.movie-table {
+    background-color: whitesmoke;
+}
+
+
+/* 
+.table-container {
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: auto;
+    grid-template-areas: "header" "Movie-Title Rating Genre"
 }
 
 .grid__section {
-  border: 1px solid #333333;
+    border: 1px solid #333333;
 }
 
 .grid__section-1 {
-  grid-area: col;
+    grid-area: header;
+    /* grid-column-start: 1;
+    grid-column-end: 3; 
 }
+
 .grid__section-2 {
-  grid-area: tr;
+    grid-area: Movie-Title;
+}
+
+.grid__section-3 {
+    grid-area: Genre;
+}
+
+.grid__section-4 {
+    grid-area: Rating;
 } */
+
 
 /* h1, h2, h3, h4, h5, h6, a, ol, li, ul, div, span,
 body, header, nav {
