@@ -6,7 +6,10 @@ body {
 }
 
 nav {
-  background: linear-gradient(to right,#f13820, #f17420);
+  background-image: url('../images/5341781-vector-old-celluloid-film-tape.PNG');
+  /*  url('../images/film-strip-773972.PNG');*/
+  background-size: contain;
+  /* background: linear-gradient(to right,#f13820, #f17420); */
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   display: flex;
   justify-content: space-around;
@@ -50,10 +53,8 @@ a {
   box-sizing: border-box;
 }
 
-
-
-.grid__container {
-  display: grid;
+/* .grid__container {
+display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: auto;
   grid-template-areas:
@@ -61,7 +62,7 @@ a {
 
 .grid__section {
   border: 1px solid #333333;
-}
+} */
 
 /* h1, h2, h3, h4, h5, h6, a, ol, li, ul, div, span,
 body, header, nav {
