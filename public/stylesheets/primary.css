@@ -1,9 +1,9 @@
-body {
+/* body {
   background-image: url('../images/GettyImages-1146804505.PNG');
   background-repeat: no-repeat;
   background-size: cover;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+} */
 
 nav {
   background: linear-gradient(to right,#f13820, #f17420);
@@ -73,3 +73,5 @@ body, header, nav {
   outline: 0;
   font-weight: normal;
 } */
+
+

@@ -4,6 +4,7 @@ html
       block head
         title= "Film Forest"
         link(rel='stylesheet' href='/stylesheets/primary.css')
+        link(rel='stylesheet' href='/stylesheets/movie.css')
   nav
         if locals.authenticated
           form(action='/users/logout' method='post')
