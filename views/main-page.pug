@@ -5,9 +5,9 @@ html
         title= "Film Forest"
         link(rel='stylesheet' href='/stylesheets/reset.css')
         link(rel='stylesheet' href='/stylesheets/mainPageNav.css')
-        .navbar 
-            .navbar_container 
-                .navbar_logo 
+        .navbar
+            .navbar_container
+                .navbar_logo
                     a(href='/')
                         img(src='/images/FilmForestLogo.png')
                 //- +validationErrorSummary(errors)
@@ -17,61 +17,97 @@ html
                     input(type='password' name='password' placeholder='Enter password')
                     a(href='/users/register')
                     button(class='button' type='submit') Login
-  body 
+  body
     .container
-        main.cell.cell-1 
-        main.cell.cell-2
-            .form_container
-            form.form(method="POST" action="/users/register")
+        cell.cell-1
+
+        cell.cell-2 Main Area
+        cell.cell-3 Main Area 2
+        cell.cell-4
+            //- .form_container
+            form(method="POST" action="/users/register")
                 input(type='hidden' name='_csrf' value=csrfToken)
                 div Don't have an account? Register here!
-                div.register 
-                    div 
-                        label(class='label1')
-                        input(type='text' name='firstName' placeholder='First Name')
-                    div 
-                        label(class='label2') 
-                        input(type='text' name='lastName' placeholder='Last Name')
-                    div 
-                        label(class='label3') 
-                        input(type='date' name='dateOfBirth' placeholder='Date of Birth')
-                    div 
-                        label(class='label4') 
-                        input(type='text' name='email' placeholder='Email')
-                    div 
-                        label(class='label5') 
-                        input(type='password' name='password' placeholder='Password')
-                    div 
-                        button(class='button' type='submit') Submit
-        main.cell.cell-3 
-        aside.cell.cell-4 Right sidebar
-        aside.cell.cell-5 Right sidebar
-        aside.cell.cell-6 Right sidebar
-        footer.cell.cell-7 Footer
+                     //- div.register
+                div
+                    label(class='label1')
+                    input(type='text' name='firstName' placeholder='First Name')
+                div
+                    label(class='label2')
+                    input(type='text' name='lastName' placeholder='Last Name')
+                div
+                    label(class='label3')
+                    input(type='date' name='dateOfBirth' placeholder='Date of Birth')
+                div
+                    label(class='label4')
+                    input(type='text' name='email' placeholder='Email')
+                div
+                    label(class='label5')
+                    input(type='password' name='password' placeholder='Password')
+                div
+                    button(class='button' type='submit') Submit
+        cell.cell-5 Margin
+        cell.cell-6 Margin
+        cell.cell-7
+                //-  div(class='table-container')
+                table(class='movie-table')
+                    thead
+                        tr
+                            th(scope='Movie-Title') Movie Title
+                            th(scope='Genre') Genre
+                            th(scope='Rating') Rating
+                    tbody
+                        each movie in movies
+                            tr
+                                td= movie.title
+                                td= movie.genre
+                                td= movie.totalRating
+        cell.cell-8 Main Area
+        cell.cell-9 Main Area
+        cell.cell-10
+        cell.cell-11
+        cell.cell-12
+            div(class='table-container')
+                table(class='movie-table')
+                    thead
+                        tr
+                            th(scope='Movie-Title') Movie Title
+                            th(scope='Genre') Genre
+                            th(scope='Rating') Rating
+                    tbody
+                        each movie in movies
+                            tr
+                                td= movie.title
+                                td= movie.genre
+                                td= movie.totalRating
+        cell.cell-13
+        cell.cell-14
+        cell.cell-15
+        cell-16 The quick brown fox jumped over the lazy dog.
 
 
-    //- .container 
-    //-     .header 
-    //-         .banner 
+    //- .container
+    //-     .header
+    //-         .banner
     //-         .form_container
     //-             form.form(method="POST" action="/users/register")
     //-                 input(type='hidden' name='_csrf' value=csrfToken)
-    //-                 div 
+    //-                 div
     //-                     label(class='label1') First Name
     //-                     input(type='text' name='firstName')
-    //-                 div 
+    //-                 div
     //-                     label(class='label2') Last Name
     //-                     input(type='text' name='lastName')
-    //-                 div 
+    //-                 div
     //-                     label(class='label3') Date Of Birth
     //-                     input(type='date' name='dateOfBirth')
-    //-                 div 
+    //-                 div
     //-                     label(class='label4') Email
     //-                     input(type='text' name='email')
-    //-                 div 
+    //-                 div
     //-                     label(class='label5') Password
     //-                     input(type='password' name='password')
-    //-                 div 
+    //-                 div
     //-                     button(class='button' type='submit') Submit
     //-     .body
 

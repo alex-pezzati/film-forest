@@ -62,7 +62,7 @@
     align-items: center;
 }
 
-@media screen and (max-width: 1100px) {
+/* @media screen and (max-width: 1100px) {
     .navbar_containter {
         display: flex;
         width: auto;
@@ -72,10 +72,10 @@
         width: auto;
         height: 32px;
     }
-}
+} */
 
 
-/* 
+/*
 .table-container {
     background-color: whitesmoke;
     display: grid;
@@ -91,7 +91,7 @@
 .grid__section-1 {
     grid-area: header;
     /* grid-column-start: 1;
-    grid-column-end: 3; 
+    grid-column-end: 3;
 }
 
 .grid__section-2 {

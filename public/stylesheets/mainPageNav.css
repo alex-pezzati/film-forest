@@ -3,7 +3,7 @@
     justify-content: center;
     background-image: url('../images/5341781-vector-old-celluloid-film-tape.PNG');
     background-size: contain;
-    height: 65px
+    height: 75px;
 }
 
 .navbar_container {
@@ -29,7 +29,7 @@
 /* Add some margins for each label */
 
 
-/* 
+/*
 .form-inline label {
     margin: 5px 10px 5px 0;
 } */
@@ -50,10 +50,11 @@
 /* Style the submit button */
 
 .form-inline button {
+    color: #ffffff;
     padding: 5px;
     border: 0px;
     border-radius: 4px;
-    background-color: royalblue;
+    background-color:#382110;
     font-size: 18px;
     line-height: 22px;
     width: 85px;
@@ -79,60 +80,108 @@
 
 .container {
     display: grid;
-    grid-template-areas: "leftBanner leftBanner registerForm registerForm bruceBanner" "left main right right right " "footer footer footer footer footer";
-    grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 10% 1fr 1fr 1fr 10%;
+    grid-template-rows: 4fr;
+    grid-template-areas:
+    "leftBanner mainBanner mainBanner2 registerForm bruceBanner"
+    "left1 main main2 right1 rightEnd"
+    "leftSecond mainSecond mainSecond2 rightSecond rightEndSecond"
+    "footer footer footer footer footer";
 }
 
 .cell-1 {
-    background: #181818;
     grid-area: leftBanner;
+    background: #32362D;
 }
 
 .cell-2 {
-    color: black;
-    background: #f4f1ea;
-    grid-area: registerForm;
+    grid-area: mainBanner;
+    background: #32362D;
 }
 
 .cell-3 {
-    background: #181818;
-    grid-area: bruceBanner;
+    background: #32362D;
+    grid-area: mainBanner2;
 }
 
 .cell-4 {
-    background: gold;
-    grid-area: left;
+    grid-area: registerForm;
+    color: black;
+    background: #f4f1ea;
 }
 
 .cell-5 {
-    background: blueviolet;
-    grid-area: main;
+    grid-area: bruceBanner;
+    background: #32362D;
 }
-
 .cell-6 {
-    background: purple;
-    grid-area: right;
+    grid-area: left1;
+    background: #ffffff;
+}
+.cell-7 {
+    grid-area: main;
+    background: #ffffff;
 }
 
-.cell-7 {
-    background: peru;
+.cell-8 {
+    grid-area: main2;
+    background: #ffffff;
+}
+
+.cell-9 {
+    grid-area: right1;
+    background:#ffffff;
+}
+
+.cell-10 {
+    grid-area: rightEnd;
+    background: #ffffff;
+}
+
+.cell-11 {
+    grid-area: leftSecond;
+    background: #ffffff;
+}
+.cell-12 {
+    grid-area: mainSecond;
+    background:  #f4f1ea;
+}
+.cell-13 {
+    grid-area: mainSecond2;
+    background: #d4d2cc;
+}
+.cell-14 {
+    grid-area: rightSecond;
+    background: #d4d2cc;
+}
+.cell-15 {
+    grid-area: rightEndSecond;
+    background: #d4d2cc;
+}
+
+.cell-16 {
+    background:  #f4f1ea;
     grid-area: footer;
 }
 
-.cell {
+/* .cell {
     font-size: 2.5rem;
     text-align: center;
     padding: 4rem;
-}
+} */
 
 form div {
     vertical-align: middle;
     margin: 5px 10px 5px 0;
-    padding: 5px;
+    padding: 5px 10px;
     border-radius: 5px;
 }
 
-.register div input {
-    width: 100%
+.movie-table {
+    padding: 15px;
+    margin: 10px;
 }
+/* .register__div--input {
+    width: 200%;
+    justify-content: flex-start;
+} */
