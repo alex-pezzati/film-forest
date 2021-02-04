@@ -17,8 +17,8 @@ router.get('/register', csrfProtection, (req, res) => {
             title: 'Register',
             user,
             csrfToken: req.csrfToken()
-        }
-    )}
+        })
+    }
 })
 
 const userValidators = [
