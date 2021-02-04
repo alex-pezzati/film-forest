@@ -8,9 +8,9 @@ module.exports = (sequelize, DataTypes) => {
         totalRating: DataTypes.NUMERIC
     }, {});
     Movie.associate = function(models) {
-        Movie.hasMany(models.Review, { foreignKey: 'moviesId' });
-        Movie.hasMany(models.Vote, { foreignKey: 'moviesId' });
-        Movie.hasMany(models.MoviesDashboard, { foreignKey: 'moviesId' });
+        Movie.hasMany(models.Review, { foreignKey: 'movieId' });
+        Movie.hasMany(models.Vote, { foreignKey: 'movieId' });
+        Movie.hasMany(models.MoviesDashboard, { foreignKey: 'movieId' });
     };
     return Movie;
 };

@@ -1,5 +1,5 @@
 const express = require('express')
-const { Movie, Review, Vote,  } = require('../db/models')
+const { Movie, Review, Vote, User  } = require('../db/models')
 
 const { asyncHandler, csrfProtection } = require('./utils.js');
 const router = express.Router()
@@ -11,9 +11,13 @@ const router = express.Router()
 
 router.get('/:id(\\d+)', asyncHandler(async (req, res) => {
     const movieId = req.params.id
-    const movie = await Movie.findByPk( movieId)
-    res.render('movie', { title: movie.title, movie })
+    const movie = await Movie.findByPk( movieId, { include: [ Review ] })
+    const reviews = movie.Reviews
+    // console.log(User)
+    
+    res.render('movie', { title: movie.title, movie, reviews })
 }))
+
 
 router.post('/:id(\\d+)', asyncHandler(async (req, res)=> {
     const movieId = req.params.id
