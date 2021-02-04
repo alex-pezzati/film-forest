@@ -8,11 +8,11 @@ block content
       div(class="movie-ratings")= movie.totalRating
       div(class="movie-description")= movie.description
     div
-      label Leaf A Review
-      form(method='post' action=`/movies/${movie.id}`)
-        input(type='text' name='review')
-        button(type='submit') Submit Review
+      label Want to leave a review? 
+        button(type='submit') 
+          a(href=`/reviews/${movie.id}`) Leave a review here!!
     div(class='reviews-div')
-      each review in reviews 
-        ul
-          li(class='movie-reviews')= review.review
+      if reviews 
+        each review in reviews 
+          ul
+            li(class='movie-reviews')= review.review
