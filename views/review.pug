@@ -1,0 +1,14 @@
+extends layout.pug 
+
+include utils.pug 
+
+block content 
+    div(class="movie-div")
+      div(class="movie-title")= movie.title
+      div(class="movie-genre")= movie.genre  
+      div(class="movie-description")= movie.description
+    div
+      form(method="post" action=`/reviews/${movie.id}`)
+        textarea(name="review" class="input-review") 
+        button(type="submit") 
+          a(href=`/movies/${movie.id}`) Submit review
