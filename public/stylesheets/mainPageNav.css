@@ -1,0 +1,64 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: grey;
+    height: 65px
+}
+
+.navbar_container {
+    display: flex;
+    justify-content: space-between;
+    width: 1100px;
+}
+
+.navbar_logo img {
+    width: 140px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.form-inline {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+
+/* Add some margins for each label */
+
+
+/* 
+.form-inline label {
+    margin: 5px 10px 5px 0;
+} */
+
+
+/* Style the input fields */
+
+.form-inline input {
+    vertical-align: middle;
+    margin: 5px 10px 5px 0;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+
+/* Style the submit button */
+
+.form-inline button {
+    padding: 5px;
+    border: 0px;
+    border-radius: 4px;
+    background-color: royalblue;
+    font-size: 18px;
+    line-height: 22px;
+    width: 85px;
+    cursor: pointer
+}
+
+.form-inline button:hover {
+    background-color: rgb(155, 172, 222);
+}

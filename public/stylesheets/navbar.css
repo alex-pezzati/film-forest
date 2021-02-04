@@ -12,8 +12,10 @@
 
 .navbar_logo img {
     width: 140px;
-    height: 50px;
+    height: 53px;
     object-fit: cover;
+    border-radius: 5px;
+    margin-top: 3px
 }
 
 .navbar_user img {

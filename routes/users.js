@@ -78,7 +78,7 @@ router.post('/register', csrfProtection, userValidators, asyncHandler(async(req,
         loginUser(req, res, user);
 
         return req.session.save(() => {
-            res.redirect('/'); //! WE DONT HAVE A HOME YET
+            res.redirect('/');
         })
 
     } else {
@@ -139,7 +139,6 @@ router.post('/login', csrfProtection, loginValidators, asyncHandler(async(req, r
         errors,
         csrfToken: req.csrfToken(),
     });
-
 }))
 
 router.post('/logout', (req, res) => {
