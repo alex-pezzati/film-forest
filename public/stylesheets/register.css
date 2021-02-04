@@ -5,7 +5,7 @@
 }
 
 form div {
-    padding: 10px
+    padding: 10px;
 }
 
 div input {
@@ -15,7 +15,7 @@ div input {
 
 form {
     border: 2px solid black;
-    border-radius: 6px
+    border-radius: 6px;
 }
 
 .button {
