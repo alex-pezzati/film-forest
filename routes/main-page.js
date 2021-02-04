@@ -6,19 +6,13 @@ const { Movie, User } = db;
 const { asyncHandler, csrfProtection } = require('./utils.js');
 
 
-
-router.get('/', asyncHandler(async (req, res) => {
+router.get('/', csrfProtection, asyncHandler(async(req, res) => {
     console.log('before query')
-    const movies = await Movie.findAll(
-        // {
-        // where: { title, totalRating }}
-    );
-
-    // const movies = await User.findAll()
-    // console.log(movies, 'this is a console log')
-
-
-    res.render('main-page', { movies });
+    const movies = await Movie.findAll();
+    res.render('main-page', {
+        movies,
+        csrfToken: req.csrfToken(),
+    });
 }));
 
 module.exports = router;

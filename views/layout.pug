@@ -5,14 +5,25 @@ html
         title= "Film Forest"
         link(rel='stylesheet' href='/stylesheets/primary.css')
         link(rel='stylesheet' href='/stylesheets/movie.css')
-  nav
-        if locals.authenticated
-          form(action='/users/logout' method='post')
-            button(type='submit') Logout
-        else
-          h1 Welcome to Film Forest
-          button: a(href='/users/login' ) Login
-          button: a(href='/users/register') Register
+        link(rel='stylesheet' href='/stylesheets/reset.css')
+        link(rel='stylesheet' href='/stylesheets/navbar.css')
+        link(rel='stylesheet' href='/stylesheets/register.css')
+        link(rel='stylesheet' href='/stylesheets/login.css')
+  body 
+    include includes/navbar.pug
+    block content 
+//-   nav
+//-         if locals.authenticated
+//-           form(action='/users/logout' method='post')
+//-             button(type='submit') Logout
+//-         else
+//-           h1 Welcome to Film Forest
+//-           button: a(href='/users/login' ) Login
+//-           button: a(href='/users/register') Register
+//- block content
+
+
+
   //- body
   //-   nav
   //-     div
@@ -24,4 +35,4 @@ html
   //-           span
   //-             a(href='/users/login') Login
   //-             a(href='/users/register') Register
-  block content
+  //- block content

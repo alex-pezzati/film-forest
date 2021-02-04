@@ -2,26 +2,30 @@ extends layout.pug
 
 include utils.pug
 
+append head 
+    link(rel='stylesheet' href='stylesheets/register.css')
+
 block content
     +validationErrorSummary(errors)
-    form(method="POST" action="/users/register")
-        input(type='hidden' name='_csrf' value=csrfToken)
-        div 
-            label First Name
-            input(type='text' name='firstName')
-        div 
-            label Last Name
-            input(type='text' name='lastName')
-        div 
-            label Date Of Birth
-            input(type='date' name='dateOfBirth')
-        div 
-            label Email
-            input(type='text' name='email')
-        div 
-            label Password
-            input(type='password' name='password')
-        div 
-            button(type='submit') Submit
-    div 
-        p: a(href='/users/login') Already have an account?
+    .form_container
+        form(method="POST" action="/users/register")
+            input(type='hidden' name='_csrf' value=csrfToken)
+            div 
+                label(class='label1') First Name
+                input(type='text' name='firstName')
+            div 
+                label(class='label2') Last Name
+                input(type='text' name='lastName')
+            div 
+                label(class='label3') Date Of Birth
+                input(type='date' name='dateOfBirth')
+            div 
+                label(class='label4') Email
+                input(type='text' name='email')
+            div 
+                label(class='label5') Password
+                input(type='password' name='password')
+            div 
+                button(class='button' type='submit') Submit
+            div 
+                p: a(href='/users/login') Already have an account?
