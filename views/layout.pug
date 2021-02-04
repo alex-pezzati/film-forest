@@ -10,17 +10,12 @@ html
             button(type='submit') Logout
         else
           h1 Welcome to Film Forest
-          button: a(href='/users/login' ) Login
-          button: a(href='/users/register') Register
-  //- body
-  //-   nav
-  //-     div
-  //-       ul
-  //-         if locals.authenticated
-  //-           form(action='/users/logout' method='post')
-  //-             button(type='submit') Logout
-  //-         else
-  //-           span
-  //-             a(href='/users/login') Login
-  //-             a(href='/users/register') Register
+            //- +validationErrorSummary(errors)
+          form(method='post' action='/users/login')
+            input(type='hidden' name='_csrf' value=csrfToken)
+            label Email
+            input(type='text' name='email')
+            label Password
+            input(type='password' name='password')
+            button(type='submit') Login
   block content

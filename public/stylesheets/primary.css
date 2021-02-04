@@ -56,15 +56,15 @@ a {
     justify-content: center;
 } */
 
-
-
-
 .table-container {
     background-color: whitesmoke;
     display: grid;
+    grid-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-columns: auto;
-    grid-template-areas: "header header header" "movies "
+    grid-template-areas:
+    "header header header"
+    "movies review reviews"
 }
 
 .grid__section {
@@ -72,12 +72,15 @@ a {
 }
 
 .grid__section-1 {
-    grid-area: header;
+  grid-area: header;
+  background-color: #ffffff;
 }
 
-.grid__section-2 .movie-table {
+.grid__section-2 > .movie-table {
     background-color: #f4f1Ea;
     grid-area: movies;
+    display: flex;
+    justify-content: center;
 }
 
 /* .grid__section-3 {
