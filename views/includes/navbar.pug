@@ -1,0 +1,22 @@
+append head 
+    link(rel='stylesheet' href='stylesheets/navbar.css')
+
+.navbar 
+    .navbar_container 
+        .navbar_logo 
+            a(href='/')
+                img(src='/images/FilmForestLogo.png')
+        ul.navbar_list 
+            li 
+                a(href='/') Home
+            li 
+                a(href='/dashboard') My Movies 
+            li 
+                a(href='/users/login') Login 
+            li 
+                a(href='/users/register') Register 
+        .navbar_search
+            input(type='search' placeholder='Search Movies')
+        .navbar_user 
+            a(href='/')
+                img(src='/images/FFminiLogo.png')

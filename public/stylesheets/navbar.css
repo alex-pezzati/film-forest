@@ -1,0 +1,59 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: grey
+}
+
+.navbar_container {
+    display: flex;
+    justify-content: space-between;
+    width: 1100px;
+}
+
+.navbar_logo img {
+    width: 140px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.navbar_user img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%
+}
+
+.navbar_list {
+    display: flex;
+    list-style: none;
+    width: 400px;
+    justify-content: space-between;
+    margin-right: 180px;
+}
+
+.navbar_list li {
+    display: flex;
+    align-items: center;
+    color: black;
+    width: 25%;
+    justify-content: center;
+}
+
+.navbar_list li:hover {
+    background-color: darkgray;
+    cursor: pointer;
+}
+
+.navbar_search {
+    display: flex;
+    align-items: center;
+}
+
+.navbar_search input {
+    width: 400px;
+    height: 32px;
+}
+
+.navbar_user {
+    display: flex;
+    align-items: center;
+}
