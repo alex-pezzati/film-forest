@@ -5,7 +5,7 @@ const router = express.Router()
 
 
 router.get('/:id(\\d+)', asyncHandler(async (req, res) => {
-    const movieId = req.params.id
+    let movieId = req.params.id
     const movie = await Movie.findByPk( movieId, { include:  Review })
     const reviews = movie.Reviews
 
