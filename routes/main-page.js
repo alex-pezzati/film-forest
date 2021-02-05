@@ -8,7 +8,9 @@ const { asyncHandler, csrfProtection } = require('./utils.js');
 
 router.get('/', csrfProtection, asyncHandler(async(req, res) => {
     console.log('before query')
-    const movies = await Movie.findAll();
+    const movies = await Movie.findAll({
+        limit: 5
+    });
     res.render('main-page', {
         movies,
         csrfToken: req.csrfToken(),

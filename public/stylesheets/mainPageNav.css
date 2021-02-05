@@ -54,7 +54,7 @@
     padding: 5px;
     border: 0px;
     border-radius: 4px;
-    background-color:#382110;
+    background-color: #382110;
     font-size: 18px;
     line-height: 22px;
     width: 85px;
@@ -80,13 +80,25 @@
 
 .container {
     display: grid;
-    grid-template-columns: 10% 1fr 1fr 1fr 10%;
-    grid-template-rows: 4fr;
-    grid-template-areas:
-    "leftBanner mainBanner mainBanner2 registerForm bruceBanner"
-    "left1 main main2 right1 rightEnd"
-    "leftSecond mainSecond mainSecond2 rightSecond rightEndSecond"
-    "footer footer footer footer footer";
+    grid-template-columns: 15% 1fr 1fr 1fr 15%;
+    grid-template-rows: auto;
+    grid-template-areas: "headerLeft header header header headerRight" "leftBanner mainBanner mainBanner registerForm bruceBanner" "left1 main main main rightEnd" "leftSecond mainSecond mainSecond2 rightSecond rightEndSecond" "footer footer footer footer footer";
+}
+
+.navBarLeft {
+    grid-area: headerLeft;
+    background-image: url('../images/5341781-vector-old-celluloid-film-tape.PNG');
+    background-size: contain;
+}
+
+.navBarBody {
+    grid-area: header;
+}
+
+.navBarRight {
+    grid-area: headerRight;
+    background-image: url('../images/5341781-vector-old-celluloid-film-tape.PNG');
+    background-size: contain;
 }
 
 .cell-1 {
@@ -94,15 +106,18 @@
     background: #32362D;
 }
 
-.cell-2 {
+.movie-night {
     grid-area: mainBanner;
     background: #32362D;
+    background-image: url('../images/movie_reel.png');
+    background-size: contain
 }
 
-.cell-3 {
+
+/* .cell-3 {
     background: #32362D;
     grid-area: mainBanner2;
-}
+} */
 
 .cell-4 {
     grid-area: registerForm;
@@ -114,24 +129,30 @@
     grid-area: bruceBanner;
     background: #32362D;
 }
+
 .cell-6 {
     grid-area: left1;
     background: #ffffff;
 }
-.cell-7 {
+
+
+/* .cell-7 {
+    grid-area: main;
+    background: #ffffff;
+} */
+
+.movie_info1 {
+    display: flex;
+    justify-content: center;
     grid-area: main;
     background: #ffffff;
 }
 
-.cell-8 {
-    grid-area: main2;
-    background: #ffffff;
-}
 
-.cell-9 {
-    grid-area: right1;
-    background:#ffffff;
-}
+/* .cell-9 {
+    grid-area: main;
+    background: #ffffff;
+} */
 
 .cell-10 {
     grid-area: rightEnd;
@@ -142,27 +163,35 @@
     grid-area: leftSecond;
     background: #ffffff;
 }
+
 .cell-12 {
     grid-area: mainSecond;
-    background:  #f4f1ea;
+    background: #f4f1ea;
 }
+
 .cell-13 {
     grid-area: mainSecond2;
     background: #d4d2cc;
 }
+
 .cell-14 {
     grid-area: rightSecond;
     background: #d4d2cc;
 }
+
 .cell-15 {
     grid-area: rightEndSecond;
     background: #d4d2cc;
 }
 
-.cell-16 {
-    background:  #f4f1ea;
+.footer {
+    /* background-color: purple; */
+    height: 75px;
     grid-area: footer;
+    content: url('../images/5341781-vector-old-celluloid-film-tape.PNG');
+    /* background-size: contain; */
 }
+
 
 /* .cell {
     font-size: 2.5rem;
@@ -178,9 +207,12 @@ form div {
 }
 
 .movie-table {
+    text-align: left;
     padding: 15px;
     margin: 10px;
 }
+
+
 /* .register__div--input {
     width: 200%;
     justify-content: flex-start;

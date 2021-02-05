@@ -5,24 +5,40 @@ html
         title= "Film Forest"
         link(rel='stylesheet' href='/stylesheets/reset.css')
         link(rel='stylesheet' href='/stylesheets/mainPageNav.css')
-        .navbar
-            .navbar_container
-                .navbar_logo
-                    a(href='/')
-                        img(src='/images/FilmForestLogo.png')
-                //- +validationErrorSummary(errors)
-                form.form-inline(method='post' action='/users/login')
-                    input(type='hidden' name='_csrf' value=csrfToken)
-                    input(type='text' name='email' placeholder='Enter email')
-                    input(type='password' name='password' placeholder='Enter password')
-                    a(href='/users/register')
-                    button(class='button' type='submit') Login
+        //- .navbar
+        //-     .navbar_container
+        //-         .navbar_logo
+        //-             a(href='/')
+        //-                 img(src='/images/FilmForestLogo.png')
+        //-         //- +validationErrorSummary(errors)
+        //-         form.form-inline(method='post' action='/users/login')
+        //-             input(type='hidden' name='_csrf' value=csrfToken)
+        //-             input(type='text' name='email' placeholder='Enter email')
+        //-             input(type='password' name='password' placeholder='Enter password')
+        //-             a(href='/users/register')
+        //-             button(class='button' type='submit') Login
   body
     .container
+        cell.navBarLeft 
+        //- cell.navBar1 
+        cell.navBarBody
+            .navbar
+                .navbar_container
+                    .navbar_logo
+                        a(href='/')
+                            img(src='/images/FilmForestLogo.png')
+                    //- +validationErrorSummary(errors)
+                    form.form-inline(method='post' action='/users/login')
+                        input(type='hidden' name='_csrf' value=csrfToken)
+                        input(type='text' name='email' placeholder='Enter email')
+                        input(type='password' name='password' placeholder='Enter password')
+                        a(href='/users/register')
+                        button(class='button' type='submit') Login
+        //- cell.navBar3 
+        cell.navBarRight
         cell.cell-1
-
-        cell.cell-2 Main Area
-        cell.cell-3 Main Area 2
+        cell.movie-night
+        //- cell.cell-3 
         cell.cell-4
             //- .form_container
             form(method="POST" action="/users/register")
@@ -46,24 +62,24 @@ html
                     input(type='password' name='password' placeholder='Password')
                 div
                     button(class='button' type='submit') Submit
-        cell.cell-5 Margin
-        cell.cell-6 Margin
-        cell.cell-7
-                //-  div(class='table-container')
-                table(class='movie-table')
-                    thead
+        cell.cell-5 
+        cell.cell-6 
+        //- cell.cell-7
+        cell.movie_info1 
+            //-  div(class='table-container')
+            table(class='movie-table')
+                thead
+                    tr
+                        th(scope='Movie-Title') Movie Title
+                        th(scope='Genre') Genre
+                        th(scope='Rating') Rating
+                tbody
+                    each movie in movies
                         tr
-                            th(scope='Movie-Title') Movie Title
-                            th(scope='Genre') Genre
-                            th(scope='Rating') Rating
-                    tbody
-                        each movie in movies
-                            tr
-                                td= movie.title
-                                td= movie.genre
-                                td= movie.totalRating
-        cell.cell-8 Main Area
-        cell.cell-9 Main Area
+                            td= movie.title
+                            td= movie.genre
+                            td= movie.totalRating
+        //- cell.cell-9 
         cell.cell-10
         cell.cell-11
         cell.cell-12
@@ -83,7 +99,7 @@ html
         cell.cell-13
         cell.cell-14
         cell.cell-15
-        cell-16 The quick brown fox jumped over the lazy dog.
+        //- cell.footer .
 
 
     //- .container
