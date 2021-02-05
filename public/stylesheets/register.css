@@ -1,3 +1,8 @@
+.register-container {
+    background-image: url('../images/GettyImages-1146804505.PNG');
+    background-size: contain;
+}
+
 .form_container {
     display: flex;
     margin-top: 100px;
