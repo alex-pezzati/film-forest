@@ -9,7 +9,7 @@
 .navbar_container {
     display: flex;
     margin-left: 20rem;
-    justify-content: center;
+    /* justify-content: center; */
     width: 80%;
     min-width: 720px;
 }
@@ -56,13 +56,13 @@
 .logout {
     border: none;
 }
+
 .navbar_search {
     display: flex;
     align-items: center;
 }
 
 .navbar_search input {
-    width: 20%;
     height: 32px;
 }
 
@@ -72,7 +72,7 @@
 }
 
 .alert-danger {
-    color:  red;
+    color: red;
     border: 2px solid black;
     border-radius: 10px;
     text-align: center;

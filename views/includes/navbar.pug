@@ -15,6 +15,11 @@ append head
                 li
                     form(class='logout' action='/users/logout' method='post')
                        a(href='/') Logout
+            .navbar_search
+                input(type='search' placeholder='Search Movies')
+            .navbar_user
+                a(href='/')
+                    img(src='/images/FFminiLogo.png')
         else
             ul.navbar_list
                 li
