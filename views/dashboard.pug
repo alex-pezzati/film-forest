@@ -2,6 +2,9 @@ extends layout.pug
 
 block content 
     .container
+    
+        //- cell.navBar3 
+        cell.navBarRight
         .cell.cell-1 
         .cell.cell-2 My Movies
         .cell.cell-3 
@@ -19,7 +22,7 @@ block content
                     each movie in movies 
                         tr 
                             td= movie.title 
-                            td= movie.title 
+                            td: a(href=`/movies/${movie.id}`)= movie.title
                             td= movie.totalRating
                             td= movie.genre
         .cell.cell-6
