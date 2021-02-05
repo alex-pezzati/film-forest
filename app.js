@@ -11,6 +11,7 @@ const usersRouter = require('./routes/users');
 const mainRouter = require('./routes/main-page')
 const { restoreUser } = require('./auth');
 const movieRouter = require('./routes/movies')
+const reviewRouter = require('./routes/reviews')
 
 const app = express();
 
@@ -42,6 +43,7 @@ store.sync();
 app.use(restoreUser);
 
 // app.use('/', indexRouter);
+app.use('/reviews', reviewRouter)
 app.use('/users', usersRouter);
 app.use('/', mainRouter);
 app.use('/movies', movieRouter)
