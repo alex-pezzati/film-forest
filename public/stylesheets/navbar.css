@@ -105,3 +105,12 @@
 .grid__section-4 {
     grid-area: Rating;
 } */
+
+.alert-danger {
+    color:  red;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #ffffff;
+    margin-top: 10px;
+}

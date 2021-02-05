@@ -1,11 +1,18 @@
-.form_container {
-    display: flex;
-    margin-top: 100px;
-    justify-content: center;
+.login-container {
+    background-image: url('../images/GettyImages-1146804505.PNG');
+    background-size: contain;
 }
 
-form div {
-    padding: 10px
+.form_container {
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.login-form{
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgb(244, 241, 234, .85);;
 }
 
 div input {
@@ -15,15 +22,25 @@ div input {
 
 form {
     border: 2px solid black;
-    border-radius: 6px
+    border-radius: 10px;
 }
 
 .button {
+    color: #ffffff;
     padding: 8px;
     border: 0px;
     border-radius: 4px;
-    background-color: grey;
+    background-color: #382110;
     font-size: 18px;
     line-height: 22px;
     width: 85px;
+}
+
+.alert-danger {
+    color:  red;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgb(255, 255, 255, .8);
+    margin-top: 10px;
 }
