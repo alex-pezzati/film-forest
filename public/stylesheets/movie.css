@@ -4,7 +4,7 @@
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
-  grid-template-areas: 
+  grid-template-areas:
   "image image ."
   "image image title"
   "image image title"
@@ -12,7 +12,7 @@
   "image image release"
   "image image ratings"
   "image image description"
-  
+
   ;
 }
 
@@ -74,8 +74,17 @@
 
 
 .reviews-div {
-    
+
     border: black 3px solid;
     overflow-y: scroll;
     height: 400px;
+}
+
+.alert-danger {
+    color:  red;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #ffffff;
+    margin-top: 10px;
 }

@@ -35,3 +35,12 @@ form {
     line-height: 22px;
     width: 85px;
 }
+
+.alert-danger {
+    color:  red;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #ffffff;
+    margin-top: 10px;
+}
