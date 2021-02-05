@@ -28,12 +28,15 @@ html
                         a(href='/')
                             img(src='/images/FilmForestLogo.png')
                     //- +validationErrorSummary(errors)
-                    form.form-inline(method='post' action='/users/login')
-                        input(type='hidden' name='_csrf' value=csrfToken)
-                        input(type='text' name='email' placeholder='Enter email')
-                        input(type='password' name='password' placeholder='Enter password')
-                        a(href='/users/register')
-                        button(class='button' type='submit') Login
+                    .navbar_container2.form-inline
+                        form.form-inline(method='post' action='/users/login')
+                            input(type='hidden' name='_csrf' value=csrfToken)
+                            input(type='text' name='email' placeholder='Enter email')
+                            input(type='password' name='password' placeholder='Enter password')
+                            a(href='/users/register')
+                            button(class='button' type='submit') Login
+                        form.form-inline(method='post' action='/users/demo')
+                            button(class='button2' type='submit') Demo Login
         //- cell.navBar3 
         cell.navBarRight
         cell.cell-1
@@ -51,9 +54,6 @@ html
                 div
                     label(class='label2')
                     input(type='text' name='lastName' placeholder='Last Name')
-                div
-                    label(class='label3')
-                    input(type='date' name='dateOfBirth' placeholder='Date of Birth')
                 div
                     label(class='label4')
                     input(type='text' name='email' placeholder='Email')
