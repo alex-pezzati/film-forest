@@ -21,7 +21,7 @@ block content
                 tbody
                     each movie in movies 
                         tr 
-                            td= movie.title 
+                            td: img(class="movie-rev-img" src=`${movie.movieUrl}`)
                             td: a(href=`/movies/${movie.id}`)= movie.title
                             td= movie.totalRating
                             td= movie.genre
