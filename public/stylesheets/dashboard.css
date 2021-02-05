@@ -1,11 +1,24 @@
 .container {
-    height: 100%;
-    width: 100%;
-    margin: 1rem;
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: 15% 1fr 1fr 1fr 15%;
     grid-template-rows: auto;
-    grid-template-areas: "space1 header space2 space2 space2 space2 space2" "space3 space4 data data data data space5"
+    grid-template-areas: "headerLeft header header header  headerRight" "space1 header1 space2 space2 space2 " "space3  data data data space5"
+}
+
+.navBarLeft {
+    grid-area: headerLeft;
+    background-image: url('../images/5341781-vector-old-celluloid-film-tape.PNG');
+    background-size: cover;
+}
+
+.navBarBody {
+    grid-area: header;
+}
+
+.navBarRight {
+    grid-area: headerRight;
+    background-image: url('../images/5341781-vector-old-celluloid-film-tape.PNG');
+    background-size: cover;
 }
 
 .cell {
@@ -20,7 +33,7 @@
 }
 
 .cell-2 {
-    grid-area: header;
+    grid-area: header1;
 }
 
 .cell-3 {

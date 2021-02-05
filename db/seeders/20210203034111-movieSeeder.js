@@ -10,7 +10,7 @@ module.exports = {
                 totalRating: .8,
                 createdAt: new Date(),
                 updatedAt: new Date(),
-                movieUrl: '/public/images/movies/soul.jpg'
+                movieUrl: '/images/movies/soul.jpg'
             },
             {
                 title: 'Onward',
@@ -20,7 +20,7 @@ module.exports = {
                 totalRating: .74,
                 createdAt: new Date(),
                 updatedAt: new Date(),
-                movieUrl: '/public/images/movies/onward.jpg'
+                movieUrl: '/images/movies/onward.jpg'
             },
             {
                 title: 'Inside Out',
@@ -30,7 +30,7 @@ module.exports = {
                 totalRating: .81,
                 createdAt: new Date(),
                 updatedAt: new Date(),
-                movieUrl: '/public/images/movies/insideOut.jpg'
+                movieUrl: '/images/movies/insideOut.jpg'
             },
             {
                 title: 'Coco',
@@ -40,7 +40,7 @@ module.exports = {
                 totalRating: .84,
                 createdAt: new Date(),
                 updatedAt: new Date(),
-                movieUrl: '/public/images/movies/coco.jpg'
+                movieUrl: '/images/movies/coco.jpg'
             },
             {
                 title: 'Fight Club',
@@ -50,7 +50,7 @@ module.exports = {
                 totalRating: .88,
                 createdAt: new Date(),
                 updatedAt: new Date(),
-                movieUrl: '/public/images/movies/fightClub.jpg'
+                movieUrl: '/images/movies/fightClub.jpg'
             },
             {
                 title: 'Inception',
@@ -60,7 +60,7 @@ module.exports = {
                 totalRating: .88,
                 createdAt: new Date(),
                 updatedAt: new Date(),
-                movieUrl: '/public/images/movies/inception.jpg'
+                movieUrl: '/images/movies/inception.jpg'
             },
             {
                 title: 'Twilight',
@@ -70,7 +70,7 @@ module.exports = {
                 totalRating: .52,
                 createdAt: new Date(),
                 updatedAt: new Date(),
-                movieUrl: '/public/images/movies/twilight.jpg'
+                movieUrl: '/images/movies/twilight.jpg'
             },
             {
                 title: 'Divergent',
@@ -80,7 +80,7 @@ module.exports = {
                 totalRating: .66,
                 createdAt: new Date(),
                 updatedAt: new Date(),
-                movieUrl: '/public/images/movies/divergent.jpg'
+                movieUrl: '/images/movies/divergent.jpg'
             },
             {
                 title: 'Set It Up',
@@ -90,7 +90,7 @@ module.exports = {
                 totalRating: .65,
                 createdAt: new Date(),
                 updatedAt: new Date(),
-                movieUrl: '/public/images/movies/setItUp.jpg'
+                movieUrl: '/images/movies/setItUp.jpg'
             },
             {
                 title: 'Stranger Than Fiction',
@@ -100,7 +100,7 @@ module.exports = {
                 totalRating: .75,
                 createdAt: new Date(),
                 updatedAt: new Date(),
-                movieUrl: '/public/images/movies/strangerThanFiction.jpg'
+                movieUrl: '/images/movies/strangerThanFiction.jpg'
             },
             {
                 title: 'Always Be My Maybe',
@@ -110,7 +110,7 @@ module.exports = {
                 totalRating: .68,
                 createdAt: new Date(),
                 updatedAt: new Date(),
-                movieUrl: '/public/images/movies/alwaysBeMyMaybe.jpg'
+                movieUrl: '/images/movies/alwaysBeMyMaybe.jpg'
             },
             {
                 title: 'Murder Mystery',
@@ -120,7 +120,7 @@ module.exports = {
                 totalRating: .6,
                 createdAt: new Date(),
                 updatedAt: new Date(),
-                movieUrl: '/public/images/movies/murderMystery.jpg'
+                movieUrl: '/images/movies/murderMystery.jpg'
             },
             {
                 title: 'The Princess Bride',
@@ -130,7 +130,7 @@ module.exports = {
                 totalRating: .8,
                 createdAt: new Date(),
                 updatedAt: new Date(),
-                movieUrl: '/public/images/movies/princesBride.jpg'
+                movieUrl: '/images/movies/princesBride.jpg'
             },
             {
                 title: 'Finding Nemo',
@@ -140,7 +140,7 @@ module.exports = {
                 totalRating: .81,
                 createdAt: new Date(),
                 updatedAt: new Date(),
-                movieUrl: '/public/images/movies/findingNemo.jpg'
+                movieUrl: '/images/movies/findingNemo.jpg'
             },
             {
                 title: 'Clue',
@@ -150,7 +150,7 @@ module.exports = {
                 totalRating: .73,
                 createdAt: new Date(),
                 updatedAt: new Date(),
-                movieUrl: '/public/images/movies/clue.jpg'
+                movieUrl: '/images/movies/clue.jpg'
             },
             {
                 title: 'The Rocky Horror Picture Show',
@@ -160,7 +160,7 @@ module.exports = {
                 totalRating: .74,
                 createdAt: new Date(),
                 updatedAt: new Date(),
-                movieUrl: '/public/images/movies/rockyHorrorPictureShow.jpg'
+                movieUrl: '/images/movies/rockyHorrorPictureShow.jpg'
             },
             {
                 title: 'Borat',
@@ -170,7 +170,7 @@ module.exports = {
                 totalRating: .73,
                 createdAt: new Date(),
                 updatedAt: new Date(),
-                movieUrl: '/public/images/movies/borat.jpg'
+                movieUrl: '/images/movies/borat.jpg'
             },
         ], {});
     },

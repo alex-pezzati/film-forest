@@ -58,7 +58,7 @@ html
                 tbody
                     each movie in movies
                         tr
-                            td= movie.title
+                            td: a(href=`/movies/${movie.id}`)= movie.title
                             td= movie.genre
                             td= movie.totalRating
         .first-right-margin
