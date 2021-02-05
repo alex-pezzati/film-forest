@@ -5,22 +5,10 @@ html
         title= "Film Forest"
         link(rel='stylesheet' href='/stylesheets/reset.css')
         link(rel='stylesheet' href='/stylesheets/mainPageNav.css')
-        //- .navbar
-        //-     .navbar_container
-        //-         .navbar_logo
-        //-             a(href='/')
-        //-                 img(src='/images/FilmForestLogo.png')
-        //-         //- +validationErrorSummary(errors)
-        //-         form.form-inline(method='post' action='/users/login')
-        //-             input(type='hidden' name='_csrf' value=csrfToken)
-        //-             input(type='text' name='email' placeholder='Enter email')
-        //-             input(type='password' name='password' placeholder='Enter password')
-        //-             a(href='/users/register')
-        //-             button(class='button' type='submit') Login
   body
     .container
-        cell.navBarLeft 
-        //- cell.navBar1 
+        cell.navBarLeft
+        //- cell.navBar1
         cell.navBarBody
             .navbar
                 .navbar_container
@@ -28,17 +16,20 @@ html
                         a(href='/')
                             img(src='/images/FilmForestLogo.png')
                     //- +validationErrorSummary(errors)
-                    form.form-inline(method='post' action='/users/login')
-                        input(type='hidden' name='_csrf' value=csrfToken)
-                        input(type='text' name='email' placeholder='Enter email')
-                        input(type='password' name='password' placeholder='Enter password')
-                        a(href='/users/register')
-                        button(class='button' type='submit') Login
+                    .navbar_container2.form-inline
+                        form.form-inline(method='post' action='/users/login')
+                            input(type='hidden' name='_csrf' value=csrfToken)
+                            input(type='text' name='email' placeholder='Enter email')
+                            input(type='password' name='password' placeholder='Enter password')
+                            a(href='/users/register')
+                            button(class='button' type='submit') Login
+                        form.form-inline(method='post' action='/users/demo')
+                            button(class='button2' type='submit') Demo Login
         //- cell.navBar3 
         cell.navBarRight
         cell.cell-1
-        cell.movie-night
-        //- cell.cell-3 
+        cell.movie-night Movie Night!
+        //- cell.cell-3
         cell.cell-4
             //- .form_container
             form(method="POST" action="/users/register")
@@ -52,9 +43,6 @@ html
                     label(class='label2')
                     input(type='text' name='lastName' placeholder='Last Name')
                 div
-                    label(class='label3')
-                    input(type='date' name='dateOfBirth' placeholder='Date of Birth')
-                div
                     label(class='label4')
                     input(type='text' name='email' placeholder='Email')
                 div
@@ -62,10 +50,10 @@ html
                     input(type='password' name='password' placeholder='Password')
                 div
                     button(class='button' type='submit') Submit
-        cell.cell-5 
-        cell.cell-6 
+        cell.cell-5
+        cell.cell-6
         //- cell.cell-7
-        cell.movie_info1 
+        cell.movie_info1
             //-  div(class='table-container')
             table(class='movie-table')
                 thead
@@ -79,10 +67,10 @@ html
                             td= movie.title
                             td= movie.genre
                             td= movie.totalRating
-        //- cell.cell-9 
+        //- cell.cell-9
         cell.cell-10
         cell.cell-11
-        cell.cell-12
+        cell.movie-info2
             div(class='table-container')
                 table(class='movie-table')
                     thead
@@ -96,51 +84,7 @@ html
                                 td= movie.title
                                 td= movie.genre
                                 td= movie.totalRating
-        cell.cell-13
-        cell.cell-14
+        //- cell.cell-13
+        //- cell.cell-14
         cell.cell-15
-        //- cell.footer .
-
-
-    //- .container
-    //-     .header
-    //-         .banner
-    //-         .form_container
-    //-             form.form(method="POST" action="/users/register")
-    //-                 input(type='hidden' name='_csrf' value=csrfToken)
-    //-                 div
-    //-                     label(class='label1') First Name
-    //-                     input(type='text' name='firstName')
-    //-                 div
-    //-                     label(class='label2') Last Name
-    //-                     input(type='text' name='lastName')
-    //-                 div
-    //-                     label(class='label3') Date Of Birth
-    //-                     input(type='date' name='dateOfBirth')
-    //-                 div
-    //-                     label(class='label4') Email
-    //-                     input(type='text' name='email')
-    //-                 div
-    //-                     label(class='label5') Password
-    //-                     input(type='password' name='password')
-    //-                 div
-    //-                     button(class='button' type='submit') Submit
-    //-     .body
-
-
-
-
-//- block content
-//-     div(class='table-container')
-//-         table(class='movie-table')
-//-             thead
-//-                 tr
-//-                     th(scope='Movie-Title') Movie Title
-//-                     th(scope='Genre') Genre
-//-                     th(scope='Rating') Rating
-//-             tbody
-//-                 each movie in movies
-//-                     tr
-//-                         td= movie.title
-//-                         td= movie.genre
-//-                         td= movie.totalRating
+        cell.footer .

@@ -10,17 +10,18 @@ html
         link(rel='stylesheet' href='/stylesheets/register.css')
         link(rel='stylesheet' href='/stylesheets/login.css')
         link(rel='stylesheet' href='/stylesheets/reviewPage.css')
+                link(rel='stylesheet' href='/stylesheets/dashboard.css')
   body 
-    include includes/navbar.pug
-    block content 
-//-   nav
-//-         if locals.authenticated
-//-           form(action='/users/logout' method='post')
-//-             button(type='submit') Logout
-//-         else
-//-           h1 Welcome to Film Forest
-//-           button: a(href='/users/login' ) Login
-//-           button: a(href='/users/register') Register
+      include includes/navbar.pug
+    block content
+  nav
+        if locals.authenticated
+          form(action='/users/logout' method='post')
+            button(type='submit') Logout
+        else
+          h1 Welcome to Film Forest
+          button: a(href='/users/login' ) Login
+          button: a(href='/users/register') Register
 //- block content
 
 

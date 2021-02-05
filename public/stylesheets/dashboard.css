@@ -1,0 +1,68 @@
+.container {
+    height: 100%;
+    width: 100%;
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "space1 header space2 space2 space2 space2 space2" "space3 space4 data data data data space5"
+}
+
+.cell {
+    /* color: white; */
+    font-size: 1rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.cell-1 {
+    grid-area: space1;
+}
+
+.cell-2 {
+    grid-area: header;
+}
+
+.cell-3 {
+    grid-area: space2;
+}
+
+.cell-4 {
+    grid-area: space3;
+}
+
+.cell-5 {
+    grid-area: space4;
+}
+
+.cell-13 {
+    display: flex;
+    justify-content: left;
+    grid-area: data;
+}
+
+.cell-6 {
+    grid-area: space5
+}
+
+table.GeneratedTable {
+    width: 100%;
+    background-color: #ffffff;
+    border-collapse: collapse;
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    color: #000000;
+}
+
+table.GeneratedTable td,
+table.GeneratedTable th {
+    border-width: 1px;
+    border-color: #000000;
+    border-style: hidden;
+    padding: 3px;
+}
+
+table.GeneratedTable thead {
+    background-color: #aae87e;
+}

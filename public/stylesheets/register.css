@@ -1,3 +1,8 @@
+.register-container {
+    background-image: url('../images/GettyImages-1146804505.PNG');
+    background-size: contain;
+}
+
 .form_container {
     display: flex;
     margin-top: 100px;
@@ -9,6 +14,12 @@ form div {
 }
 
 div input {
+    vertical-align: middle;
+    margin: 5px 10px 5px 0;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #ddd;
     display: flex;
     justify-content: right;
 }
@@ -16,6 +27,13 @@ div input {
 form {
     border: 2px solid black;
     border-radius: 6px;
+}
+
+.register-form {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgb(244, 241, 234, .85);
+    ;
 }
 
 .button {
@@ -26,4 +44,13 @@ form {
     font-size: 18px;
     line-height: 22px;
     width: 85px;
+}
+
+.alert-danger {
+    color: red;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #ffffff;
+    margin-top: 10px;
 }
