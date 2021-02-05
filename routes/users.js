@@ -58,16 +58,12 @@ const userValidators = [
     // implement this once we have legit seed users and feel like making real passwords, nah meen?
     // .matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])/, 'g')
     // .withMessage('Password must contain at least 1 lowercase letter, uppercase letter, number, and special character (i.e. "!@#$%^&*")'),
-
-    check('dateOfBirth')
-    .exists({ checkFalsy: true })
-    .withMessage('Please provide a valid date of birth.')
 ];
 
 router.post('/register', csrfProtection, userValidators, asyncHandler(async(req, res) => {
-    const { firstName, lastName, dateOfBirth, password, email } = req.body;
+    const { firstName, lastName, password, email } = req.body;
 
-    const user = db.User.build({ firstName, lastName, dateOfBirth, email });
+    const user = db.User.build({ firstName, lastName, email });
 
     const validatorErrors = validationResult(req);
 
@@ -145,6 +141,16 @@ router.post('/logout', (req, res) => {
     logoutUser(req, res);
     res.redirect('/');
 });
+
+
+router.post('/demo', asyncHandler(async(req, res) => {
+    const demoUser = await db.User.findOne({ where: { email: 'demo@demo.com' } });
+    loginUser(req, res, demoUser);
+    return req.session.save((err) => {
+        if (err) next(err);
+        else res.redirect(`/dashboard`)
+    })
+}))
 
 
 /* GET users listing. */
