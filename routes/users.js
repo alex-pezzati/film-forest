@@ -74,7 +74,7 @@ router.post('/register', csrfProtection, userValidators, asyncHandler(async(req,
         loginUser(req, res, user);
 
         return req.session.save(() => {
-            res.redirect('/');
+            res.redirect('/dashboard');
         })
 
     } else {
