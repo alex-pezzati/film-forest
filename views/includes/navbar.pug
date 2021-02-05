@@ -9,12 +9,10 @@ append head
         if locals.authenticated
             ul.navbar_list
                 li
-                    a(href='/') Home
-                li
                     a(href='/dashboard') My Movies
                 li
                     form(class='logout' action='/users/logout' method='post')
-                       a(href='/') Logout
+                       button.button(type='submit') Logout
             .navbar_search
                 input(type='search' placeholder='Search Movies')
             .navbar_user
@@ -22,8 +20,6 @@ append head
                     img(src='/images/FFminiLogo.png')
         else
             ul.navbar_list
-                li
-                    a(href='/') Home
                 li
                     a(href='/dashboard') My Movies
                 li

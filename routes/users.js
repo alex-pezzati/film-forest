@@ -137,11 +137,6 @@ router.post('/login', csrfProtection, loginValidators, asyncHandler(async(req, r
     });
 }))
 
-router.post('/logout', (req, res) => {
-    logoutUser(req, res);
-    res.redirect('/');
-});
-
 
 router.post('/demo', asyncHandler(async(req, res) => {
     const demoUser = await db.User.findOne({ where: { email: 'demo@demo.com' } });
@@ -152,6 +147,11 @@ router.post('/demo', asyncHandler(async(req, res) => {
     })
 }))
 
+router.post('/logout', (req, res) => {
+    console.log('WERE INSIDE THIS FUNCTION!!!!!!!!!!', req.session)
+    logoutUser(req, res);
+    res.redirect('/');
+});
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {

@@ -3,6 +3,7 @@
     background-size: contain;
     display: flex;
     justify-content: center;
+    height: 75px;
     /* background-color: grey */
 }
 
@@ -34,6 +35,18 @@
     width: 400px;
     justify-content: space-between;
     margin-right: 180px;
+}
+
+.button {
+    font-weight: 800;
+    background-color: rgb(244, 241, 234, .4);
+    border-radius: 6px;
+    align-items: center;
+    color: black;
+    width: 25%;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
 }
 
 .navbar_list li {
