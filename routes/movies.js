@@ -9,6 +9,9 @@ router.get('/:id(\\d+)', asyncHandler(async (req, res) => {
     const movie = await Movie.findByPk( movieId, { include:  Review })
     const reviews = movie.Reviews
 
+    console.log(movie)
+    console.log(movie.movieUrl, 'movie path')
+
     if(reviews.length === 0) {
         res.render('movie', { movie })
     } else {
