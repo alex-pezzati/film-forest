@@ -6,7 +6,7 @@ append head
     link(rel='stylesheet' href='stylesheets/register.css')
 
 block content
-    div
+    div(class='register-container')
         +validationErrorSummary(errors)
         .form_container
             form(method="POST" action="/users/register")
