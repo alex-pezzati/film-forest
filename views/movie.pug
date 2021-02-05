@@ -3,16 +3,23 @@ extends layout.pug
 block content
     div(class="movie-div")
       div(class="movie-title")= movie.title
-      div(class="movie-genre")= movie.genre  
+      div(class="movie-genre")= movie.genre
       div(class="movie-release")= movie.releaseDate
       div(class="movie-ratings")= movie.totalRating
       div(class="movie-description")= movie.description
     div
-      label Want to leave a review? 
-        button(type='submit') 
+      label Want to leave a review?
+        button(type='submit')
           a(href=`/reviews/${movie.id}`) Leave a review here!!
     div(class='reviews-div')
-      if reviews 
-        each review in reviews 
+      if reviews
+        each review in reviews
           ul
             li(class='movie-reviews')= review.review
+            each user in users
+              if user.id===review.userId
+                li= user.firstName
+            //- li(class='movie-reviews')= user.firstName
+        //- each user in users
+        //-   ul
+        //-     li= user.firstName
