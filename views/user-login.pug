@@ -1,22 +1,23 @@
-extends layout.pug 
+extends layout.pug
 
-include utils.pug 
+include utils.pug
 
-append head 
+append head
     link(rel='stylesheet' href='stylesheets/login.css')
 
-block content 
+block content
     +validationErrorSummary(errors)
     .form_container
         form(method='post' action='/users/login')
             input(type='hidden' name='_csrf' value=csrfToken)
-            div 
-                label Email 
-                input(type='text' name='email')
-            div
-                label Password 
-                input(type='password' name='password')
-            div 
-                button(class='button' type='submit') Login
-            div 
-                p: a(href='/users/register') Don't have an account?
+            div(class='login-form')
+                div
+                    label Email
+                    input(type='text' name='email')
+                div
+                    label Password
+                    input(type='password' name='password')
+                div
+                    button(class='button' type='submit') Login
+                div
+                    p: a(href='/users/register') Don't have an account?
