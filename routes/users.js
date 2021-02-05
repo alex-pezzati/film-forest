@@ -122,7 +122,7 @@ router.post('/login', csrfProtection, loginValidators, asyncHandler(async(req, r
 
             if (passwordMatch) {
                 loginUser(req, res, user);
-                return req.session.save(() => { res.redirect('/') });
+                return req.session.save(() => { res.redirect('/dashboard') });
             }
         }
         errors.push('Login failed, please check credentials')

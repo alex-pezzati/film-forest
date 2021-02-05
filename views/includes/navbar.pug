@@ -13,8 +13,8 @@ append head
                 li
                     a(href='/dashboard') My Movies
                 li
-                    form(action='/users/logout' method='post')
-                        button(type='submit') Logout
+                    form(class='logout' action='/users/logout' method='post')
+                       a(href='/') Logout
         else
             ul.navbar_list
                 li
