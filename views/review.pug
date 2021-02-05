@@ -3,12 +3,14 @@ extends layout.pug
 include utils.pug
 
 block content
-    div(class="movie-div")
-      div(class="movie-title")= movie.title
-      div(class="movie-genre")= movie.genre
-      div(class="movie-description")= movie.description
+    div(class="movie-rev-div")
+      img(class="movie-rev-img" src="/images/borat.jpg")
+      div(class="movie-rev-title")= movie.title
+      div(class="movie-rev-genre")= movie.genre
+      div(class="movie-rev-description")= movie.description
     div
-      form(method="post" action=`/reviews/${movie.id}`)
+      form(method="post" action=`/reviews/${movie.id}` class='review-form')
+        label(class='leave-review')= 'Leave Review Here'
         textarea(name="review" class="input-review")
-        button(type="submit") Submit Review
+        button(type="submit" class='submit-buddon') Submit Review
           //- a(href=`/movies/${movie.id}`) Submit review

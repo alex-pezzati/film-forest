@@ -9,7 +9,7 @@
   "image image title"
   "image image genre"
   "image image release"
-  "image image ratings"
+  "image image ratings" 
   "image image description"
   
   ;
@@ -23,7 +23,7 @@
     padding-bottom: 0%;
     grid-area: title;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 100px;
+    font-size: 50px;
 }
 
 .movie-genre {
@@ -31,7 +31,7 @@
     padding-bottom: 0%;
     grid-area: genre;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .movie-release {
@@ -39,26 +39,28 @@
     padding-bottom: 0%;
     grid-area: release;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 20px;
+    font-size: 12px;
 }
 .movie-ratings {
     padding-top: 0%;
     padding-bottom: 0%;
     grid-area: ratings;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 30px;
+    font-size: 13px;
 }
 .movie-description {
     padding-top: 0%;
     padding-bottom: 30px;
     grid-area: description;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 30px ;
+    font-size: 20px ;
 }
 .review-div{
     /* background: #32362D; */
     margin-left: 80px;
     margin-right: 80px;
+    margin-bottom: 50px;
+    padding-top: 40px;
     border-top: rgb(175, 181, 187) solid thin;
     display: flex;
     justify-content: center;
@@ -94,15 +96,17 @@
 .user{
     /* grid-area: user; */
     justify-self: left;
+    font-size: 20px;
+
 }
 .movie-reviews {
     /* grid-area: review; */
     justify-self: right;
-    background: #d8c9c9;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 20px;
+    font-size: 15px;
     margin-left: 40px;
     margin-right: 10px;
+    
 }
 
 
@@ -110,4 +114,5 @@
     border-top: rgb(175, 181, 187) solid thin;
     margin-left: 80px;
     margin-right: 80px;
+    margin-bottom: 80px;
 }

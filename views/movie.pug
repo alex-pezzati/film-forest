@@ -5,8 +5,13 @@ block content
       img(class="movie-img" src="/images/borat.jpg")
       div(class="movie-title")= movie.title
       div(class="movie-genre")= movie.genre
-      div(class="movie-release")= movie.releaseDate
-      div(class="movie-ratings")= movie.totalRating
+      div(class="movie-release")= 'Release  ' + movie.releaseDate.toDateString()
+      div(class="movie-ratings")= Math.floor(movie.totalRating * 100)+'%'
+        if movie.totalRating > .50 
+          div(class="fire")=  '🔥'
+        if movie.totalRating < .50 
+          div(class="Disaster")= '🌪'
+
       div(class="movie-description")= movie.description
     div(class="review-div")
       label(class="review-label") Want to leave a review?
