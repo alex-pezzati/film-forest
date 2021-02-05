@@ -10,11 +10,12 @@
         " . revImage revTitle ."  
         " . revImage revGenre ."  
         " . revImage revDescription ."  
-        " . revImage revDescription ."  ;
-
+        " . revImage revDescription ."
 }
 
 .movie-rev-img {
+    width: 70%;
+    height: auto;
     grid-area: revImage;
     padding: 30px;
 }
@@ -42,7 +43,7 @@
     font-size: 20px;
 }
 
-.review-form{
+.review-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -61,13 +62,13 @@
     justify-content: center;
 }
 
-.submit-buddon{
+.submit-buddon {
     width: 20%;
     justify-content: center;
     align-self: center;
 }
 
-.leave-review{
+.leave-review {
     align-self: center;
     font-size: 30px;
 }
