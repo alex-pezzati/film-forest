@@ -18,6 +18,12 @@ form {
     border-radius: 6px;
 }
 
+.register-form{
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgb(244, 241, 234, .85);;
+}
+
 .button {
     padding: 8px;
     border: 0px;
