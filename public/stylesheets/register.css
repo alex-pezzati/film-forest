@@ -14,6 +14,12 @@ form div {
 }
 
 div input {
+    vertical-align: middle;
+    margin: 5px 10px 5px 0;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #ddd;
     display: flex;
     justify-content: right;
 }
@@ -23,10 +29,11 @@ form {
     border-radius: 6px;
 }
 
-.register-form{
+.register-form {
     border-radius: 10px;
     padding: 10px;
-    background-color: rgb(244, 241, 234, .85);;
+    background-color: rgb(244, 241, 234, .85);
+    ;
 }
 
 .button {
@@ -40,7 +47,7 @@ form {
 }
 
 .alert-danger {
-    color:  red;
+    color: red;
     border: 2px solid black;
     border-radius: 10px;
     text-align: center;

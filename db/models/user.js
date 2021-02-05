@@ -4,8 +4,7 @@ module.exports = (sequelize, DataTypes) => {
         firstName: DataTypes.STRING,
         lastName: DataTypes.STRING,
         hashedPassword: DataTypes.STRING,
-        email: DataTypes.STRING,
-        dateOfBirth: DataTypes.STRING
+        email: DataTypes.STRING
     }, {});
     User.associate = function(models) {
         User.hasMany(models.Review, { foreignKey: 'userId' })

@@ -50,6 +50,7 @@
 /* Style the submit button */
 
 .form-inline button {
+    margin-left: 8px;
     color: #ffffff;
     padding: 5px;
     border: 0px;
@@ -222,13 +223,15 @@ form div {
 }
 
 .alert-danger {
-    color:  red;
+    color: red;
     border: 2px solid black;
     border-radius: 10px;
     text-align: center;
     background-color: #ffffff;
     margin-top: 10px;
 }
+
+
 /* .register__div--input {
     width: 200%;
     justify-content: flex-start;

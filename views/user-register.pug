@@ -7,27 +7,25 @@ append head
 
 block content
     div(class='register-container')
-        +validationErrorSummary(errors)
-        .form_container
-            form(method="POST" action="/users/register")
-                input(type='hidden' name='_csrf' value=csrfToken)
-                div(class='register-form')
-                    div
-                        label(class='label1') First Name
-                        input(type='text' name='firstName')
-                    div
-                        label(class='label2') Last Name
-                        input(type='text' name='lastName')
-                    div
-                        label(class='label3') Date Of Birth
-                        input(type='date' name='dateOfBirth')
-                    div
-                        label(class='label4') Email
-                        input(type='text' name='email')
-                    div
-                        label(class='label5') Password
-                        input(type='password' name='password')
-                    div
-                        button(class='button' type='submit') Submit
-                    div
-                        p: a(href='/users/login') Already have an account?
+      +validationErrorSummary(errors)
+      .form_container
+          form(method="POST" action="/users/register")
+              input(type='hidden' name='_csrf' value=csrfToken)
+              div(class='register-form')
+                  div
+                      label(class='label1') First Name
+                      input(type='text' name='firstName')
+                  div
+                      label(class='label2') Last Name
+                      input(type='text' name='lastName')
+                  div
+                      label(class='label4') Email
+                      input(type='text' name='email')
+                  div
+                      label(class='label5') Password
+                      input(type='password' name='password')
+                  div
+                      button(class='button' type='submit') Submit
+                  div
+                      p: a(href='/users/login') Already have an account?
+
