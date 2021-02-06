@@ -16,6 +16,7 @@ html
                         a(href='/')
                             img(src='/images/FFLogo.png')
                     //- +validationErrorSummary(errors)
+                    if locals.authenticated
                     .navbar_container2.form-inline
                         form.form-inline(method='post' action='/users/login')
                             input(type='hidden' name='_csrf' value=csrfToken)
@@ -48,34 +49,47 @@ html
                     button(class='button' type='submit') Submit
         .topBannerRight
         .first-left-margin
+        .second-right-margin
+        .footer
         .movie-info1
-            table(class='movie-table')
-                thead
+            table.GeneratedTable.sortable
+                th The Best Movies
                     tr
-                        th(scope='Movie-Title') Movie Title
-                        th(scope='Genre') Genre
-                        th(scope='Rating') Rating
+                        th
+                        th
+                        th
                 tbody
-                    each movie in movies
+                    each movie in moviesBest
                         tr
+                            td: a(href=`/movies/${movie.id}`)
+                                img(src=`${movie.movieUrl}` height='100px')
                             td: a(href=`/movies/${movie.id}`)= movie.title
-                            td= movie.genre
-                            td= movie.totalRating
+                            td
+                                if movie.totalRating > .50
+                                    span.fire=  '🔥'
+                                if movie.totalRating < .50
+                                    span.Disaster= '🌪'
+                                span= Math.floor(movie.totalRating * 100)+'%'
+            table.GeneratedTable.sortable
+                th The Worst Movies
+                    tr
+                        th
+                        th
+                        th
+                tbody
+                    each movie in moviesWorst
+                        tr
+                            td: a(href=`/movies/${movie.id}`)
+                                img(src=`${movie.movieUrl}` height='100px')
+                            td: a(href=`/movies/${movie.id}`)= movie.title
+                            td
+                                if movie.totalRating > .50
+                                    span.fire=  '🔥'
+                                if movie.totalRating < .50
+                                    span.Disaster= '🌪'
+                                span= Math.floor(movie.totalRating * 100)+'%'
+        .movie-info2
         .first-right-margin
         .second-left-margin
-        .movie-info2
-            div(class='table-container')
-                table(class='movie-table')
-                    thead
-                        tr
-                            th(scope='Movie-Title') Movie Title
-                            th(scope='Genre') Genre
-                            th(scope='Rating') Rating
-                    tbody
-                        each movie in movies
-                            tr
-                                td= movie.title
-                                td= movie.genre
-                                td= movie.totalRating
         .second-right-margin
-        .footer .
+        .footer

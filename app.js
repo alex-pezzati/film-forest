@@ -6,13 +6,12 @@ const logger = require('morgan');
 const { sequelize } = require('./db/models');
 const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
-const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const mainRouter = require('./routes/main-page')
 const { restoreUser, requireAuth } = require('./auth');
 const movieRouter = require('./routes/movies')
 const reviewRouter = require('./routes/reviews')
-const dashboardRouter = require('./routes/dashboard')
+const myMoviesRouter = require('./routes/my-movies')
 
 const app = express();
 
@@ -44,12 +43,12 @@ store.sync();
 app.use(restoreUser);
 // consider using the requireAuth as middleware over here
 // app.use('/', indexRouter);
+app.use('/', mainRouter);
+app.use('/users', usersRouter);
 app.use('/movies', movieRouter)
 app.use('/reviews', reviewRouter)
-app.use('/users', usersRouter);
-app.use('/', mainRouter);
 app.use(requireAuth)
-app.use('/dashboard', dashboardRouter)
+app.use('/my-movies', myMoviesRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
