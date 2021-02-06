@@ -8,24 +8,18 @@ append head
                 img(src='/images/FilmForestLogo.png')
         if locals.authenticated
             ul.navbar_list
-                li
-                    a(href='/dashboard') My Movies
-                li
-                    form(class='logout' action='/users/logout' method='post')
+                li: a(href='/dashboard') My Movies
+                li: form(class='logout' action='/users/logout' method='post')
                        button.button(type='submit') Logout
             .navbar_search
                 input(type='search' placeholder='Search Movies')
             .navbar_user
-                a(href='/')
-                    img(src='/images/FFminiLogo.png')
+                a(href='/'): img(src='/images/FFminiLogo.png')
         else
             ul.navbar_list
-                li
-                    a(href='/dashboard') My Movies
-                li
-                    a(href='/users/login') Login
-                li
-                    a(href='/users/register') Register
+                li: a(href='/dashboard') My Movies
+                li: a(href='/users/login') Login
+                li: a(href='/users/register') Register
             .navbar_search
                 input(type='search' placeholder='Search Movies')
             .navbar_user

@@ -7,12 +7,17 @@ const { asyncHandler, csrfProtection } = require('./utils.js');
 
 
 router.get('/', csrfProtection, asyncHandler(async(req, res) => {
-    console.log('before query')
-    const movies = await Movie.findAll({
-        limit: 5
+    const moviesBest = await Movie.findAll({
+        limit: 15,
+        order: [[ 'totalRating', 'DESC' ]]
+    });
+    const moviesWorst = await Movie.findAll({
+        limit: 15,
+        order: [[ 'totalRating', 'ASC' ]]
     });
     res.render('main-page', {
-        movies,
+        moviesBest,
+        moviesWorst,
         csrfToken: req.csrfToken(),
     });
 }));
