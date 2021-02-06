@@ -44,6 +44,7 @@ form {
     font-size: 18px;
     line-height: 22px;
     width: 85px;
+    cursor: pointer;
 }
 
 .alert-danger {

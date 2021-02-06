@@ -15,7 +15,6 @@
         " left . revDescription right"
         "left . . right "
         "left . . right ";
-
 }
 .movieLeft{
     grid-area: left;
@@ -64,7 +63,7 @@
     font-size: 20px;
 }
 
-.review-form{
+.review-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -84,13 +83,13 @@
     justify-content: center;
 }
 
-.submit-buddon{
+.submit-buddon {
     width: 20%;
     justify-content: center;
     align-self: center;
 }
 
-.leave-review{
+.leave-review {
     align-self: center;
     font-size: 30px;
     padding-bottom: 20px;
