@@ -4,10 +4,16 @@ include utils.pug
 
 block content
     div(class="movie-rev-div")
-      img(class="movie-rev-img" src=`${movie.movieUrl}`)
-      div(class="movie-rev-title")= movie.title
-      div(class="movie-rev-genre")= movie.genre
-      div(class="movie-rev-description")= movie.description
+      cell.movieLeft
+      cell.movieImg 
+        img(class="movie-rev-img" src=`${movie.movieUrl}`)
+      cell.movieTitle
+        div(class="movie-rev-title")= movie.title
+      cell.movieGenre
+        div(class="movie-rev-genre")= movie.genre
+      cell.movieDes
+        div(class="movie-rev-description")= movie.description
+      cell.movieRight
     div
       form(method="post" action=`/reviews/${movie.id}` class='review-form')
         label(class='leave-review')= 'Leave Review Here'

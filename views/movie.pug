@@ -2,21 +2,31 @@ extends layout.pug
 
 block content
     div(class="movie-div")
-      img(class="movie-img" src=`${movie.movieUrl}`)
-      div(class="movie-title")= movie.title
-      div(class="movie-genre")= movie.genre
-      div(class="movie-release")= 'Release  ' + movie.releaseDate.toDateString()
-      div(class="movie-ratings")= Math.floor(movie.totalRating * 100)+'%'
-        if movie.totalRating > .50
-          div(class="fire")=  '🔥'
-        if movie.totalRating < .50
-          div(class="Disaster")= '🌪'
-
-      div(class="movie-description")= movie.description
+      cell.mleft
+      cell.img
+        img(class="movie-img" src=`${movie.movieUrl}`)
+      cell.title 
+        div(class="movie-title")= movie.title
+      cell.genre
+        div(class="movie-genre")= movie.genre
+      cell.release
+        div(class="movie-release")= 'Release  ' + movie.releaseDate.toDateString()
+      cell.ratings
+        div(class="movie-ratings")= Math.floor(movie.totalRating * 100)+'%'
+          if movie.totalRating > .50
+            div(class="fire")=  '🔥'
+          if movie.totalRating < .50
+            div(class="Disaster")= '🌪'
+      cell.description
+        div(class="movie-description")= movie.description
+      cell.addToList 
+        button(type='submit' class='add-movie') Add to My Movies
+      cell.mright
     div(class="review-div")
-      label(class="review-label") Want to leave a review?
-        button(type='submit' class="review-button")
-          a(href=`/reviews/${movie.id}`) Leave a review here!!
+      if locals.authenticated
+        label(class="review-label") Want to leave a review?
+          button(type='submit' class="review-button")
+            a(href=`/reviews/${movie.id}`) Leave a review here!!
     div(class='reviews-div')
       if reviews
         each review in reviews
