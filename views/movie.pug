@@ -2,6 +2,7 @@ extends layout.pug
 
 block content
     div(class="movie-div")
+      cell.mtop
       cell.mleft
       cell.img
         img(class="movie-img" src=`${movie.movieUrl}`)
@@ -13,9 +14,9 @@ block content
         div(class="movie-release")= 'Release  ' + movie.releaseDate.toDateString()
       cell.ratings
         div(class="movie-ratings")= Math.floor(movie.totalRating * 100)+'%'
-          if movie.totalRating > .50
+          if movie.totalRating > .70
             div(class="fire")=  '🔥'
-          if movie.totalRating < .50
+          if movie.totalRating < .69
             div(class="Disaster")= '🌪'
       cell.description
         div(class="movie-description")= movie.description
@@ -28,14 +29,16 @@ block content
           button(type='submit' class="review-button")
             a(href=`/reviews/${movie.id}`) Leave a review here!!
     div(class='reviews-div')
-      if reviews
-        each review in reviews
-          ul(class='single-review')
-            div(class='movie-reviews')= review.review
-            each user in users
-              if user.id===review.userId
-                div(class='user')= user.firstName
-            //- li(class='movie-reviews')= user.firstName
-        //- each user in users
-        //-   ul
-        //-     li= user.firstName
+      cell.Rleft 
+      cell.singleR
+        if reviews
+          each review in reviews
+            div(class='single-review')
+              div(class='movie-reviews')= review.review
+              each user in users
+                if user.id===review.userId
+                  div(class='user')= user.firstName
+      cell.userR 
+        label(class="user-reviews") Community Reviews 
+      cell.Rright 
+      cell.Rbottom

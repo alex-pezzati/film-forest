@@ -1,20 +1,24 @@
 .movie-rev-div {
     padding: 50px;
+    padding-bottom: 0%;
     display: grid;
     grid-template-columns: 15% 1fr 3fr 15%;
-    grid-template-rows: 10% 10% 10% 10% 10% 10% 20% 10% 10%;
+    grid-template-rows: 10% 10% 10% 10% 10% 40% 10%;
     grid-template-areas:
         "left . . right "
-        "left . . right "
-        " left revImage . right"  
-        " left revImage . right"  
-        /* " left revImage revTitle right"   */
-        " left revImage revTitle right"  
-        " left revImage revGenre right"  
-        /* " left revImage revDescription right"   */
-        " left . revDescription right"
-        "left . . right "
-        "left . . right ";
+        "left revImage . right"  
+        "left revImage . right"  
+        "left revImage revTitle right"  
+        "left revImage revGenre right"  
+        "left . revDescription right"
+        "bottom bottom bottom bottom";
+    margin: 50px;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+.movieBottom{
+  grid-area: bottom;
+  background: #32362D;
 }
 .movieLeft{
     grid-area: left;
@@ -29,8 +33,9 @@
     grid-area: revImage;
 }
 .movie-rev-img {
-    padding: 30px;
-    padding-top: 50px;
+    margin-bottom: 30px;
+    width: 250px;
+    height: 350px;
 }
 .movieTitle {
     grid-area: revTitle;
@@ -58,7 +63,6 @@
 
 .movie-rev-description {
     padding-top: 30px;
-    /* padding-bottom: 30px; */
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 20px;
 }
@@ -68,29 +72,70 @@
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 80px;
+    padding-right: 80px;
     height: 400px;
-    margin: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
     border: 0px;
-    border-top: slategrey thin solid;
     border-radius: 0px;
+    grid-area: reviewF;
+}
+.review{
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 10% 90%;
+    grid-template-areas:
+    "top top top"
+    "leftS reviewF rightS";
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 440px;
+    margin: 50px;
+    margin-top: 0%;
+    
+}
+.left-space{
+    grid-area: leftS;
+    background: #d4d2cc;  
 }
 
+.top{
+     grid-area: top;
+     background: #d4d2cc;
+}
+
+.right-space {
+    grid-area: rightS;
+    background: #d4d2cc
+}
 .input-review {
-    height: 50%;
-    width: 100%;
-    justify-content: center;
+    height: 300px;
+    width: 90%;
+    justify-self: center;
+    align-self: center;
+    border: 1px solid #888;
+    background-color:rgb(244, 241, 234, .85);
+    resize: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
 }
 
 .submit-buddon {
-    width: 20%;
+    width: 30%;
+    height: 30px;
     justify-content: center;
     align-self: center;
+    margin: 20px;
+    border-radius: 4px;
+    background-color: #382110;
+    color: #ffffff;
+    font-size: 16px;
 }
 
 .leave-review {
     align-self: center;
     font-size: 30px;
     padding-bottom: 20px;
+    margin-top: 20px;
 }

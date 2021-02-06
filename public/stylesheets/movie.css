@@ -3,9 +3,9 @@
     padding: 50px;
     display: grid;
     grid-template-columns: 15% 1fr 3fr 15%;
-    grid-template-rows: 30% 10% 10% 5% 5% 10% 10% 20%;
+    grid-template-rows: 10% 20% 10% 10% 5% 5% 10% 20% 10%;
     grid-template-areas:
-        /* "mleft . . mright " */
+        "mtop mtop mtop mtop"
         "mleft image . mright "
         "mleft image title mright"
         "mleft image title mright"
@@ -14,7 +14,13 @@
         "mleft image ratings mright"
         "mleft . description mright"
         "mleft addM description mright";
-
+    margin: 50px;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+.mtop{
+  grid-area: mtop;
+  background: #32362D;
 }
 .addToList {
     grid-area: addM;
@@ -48,7 +54,7 @@
     grid-area: description;
 }
 .movie-img {
-    padding: 30px;
+    padding-bottom: 10px;
     width: 242px;
     height: 330px;
 }
@@ -84,8 +90,8 @@
 }
 .review-div{
     /* background: #32362D; */
-    margin-left: 80px;
-    margin-right: 80px;
+    margin-left: 100px;
+    margin-right: 100px;
     margin-bottom: 50px;
     padding-top: 40px;
     border-top: rgb(175, 181, 187) solid thin;
@@ -105,9 +111,14 @@
 .review-button {
     background-color: rgb(223, 213, 213);
     margin-left: 30px;
+    border-radius: 4px;
+    background-color: #382110;
+    color: #ffffff;
+    height: 50px;
+    width: 175px ;
 }
 .single-review {
-    background: #d4d2cc;
+    background: #f0eeea;
     padding: 10px;
     margin-top: 10px;
     margin-bottom: 5px;
@@ -117,24 +128,56 @@
 .user{
     justify-self: left;
     font-size: 20px;
-
+    
 }
 .movie-reviews {
     justify-self: right;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 15px;
-    margin-left: 40px;
+    margin-left: 80px;
     margin-right: 10px;
-    
 }
-
 
 .reviews-div {
-    border-top: rgb(175, 181, 187) solid thin;
-    margin-left: 80px;
-    margin-right: 80px;
-    margin-bottom: 80px;    
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 10% 10% 70% 10%;
+    grid-template-areas: 
+    ". . ."
+    "Rleft userR Rright"
+    "Rleft singleR Rright"
+    "Rleft Rbottom Rright";
+    border-top: rgb(175, 181, 187) solid thin; 
+    height: 500px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
+.userR {
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-left: 40%;
+    padding-top: 20px; 
+    grid-area: userR;
+    background: #d4d2cc;
+}
+.Rleft {
+    grid-area: Rleft;
+    background: #d4d2cc
+}
+.singleR {
+    overflow-y: scroll;  
+    grid-area: singleR;
+    background: #d4d2cc
+}
+.Rright{
+    grid-area: Rright;
+    background: #d4d2cc
+}
+.Rbottom{
+    grid-area: Rbottom;
+    background: #d4d2cc
+}
+
 
 .alert-danger {
     color:  red;
