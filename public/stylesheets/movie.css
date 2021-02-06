@@ -105,14 +105,19 @@
 .review-button {
     background-color: rgb(223, 213, 213);
     margin-left: 30px;
+    border-radius: 4px;
+    background-color: #382110;
+    color: #ffffff;
+    height: 30px;
 }
 .single-review {
-    background: #d4d2cc;
+    background: #f0eeea;
     padding: 10px;
     margin-top: 10px;
     margin-bottom: 5px;
     display: flex;
     flex-direction: column-reverse;
+    grid-area: single;
 }
 .user{
     justify-self: left;
@@ -135,6 +140,7 @@
     margin-right: 80px;
     margin-bottom: 80px;    
 }
+
 
 .alert-danger {
     color:  red;

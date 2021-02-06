@@ -14,9 +14,9 @@ block content
       cell.movieDes
         div(class="movie-rev-description")= movie.description
       cell.movieRight
-    div
-      form(method="post" action=`/reviews/${movie.id}` class='review-form')
-        label(class='leave-review')= 'Leave Review Here'
+    div(class="review-form")
+     form(method="post" action=`/reviews/${movie.id}` class='review-form')
+      label(class='leave-review')= 'Leave Review Here'
         textarea(name="review" class="input-review")
         button(type="submit" class='submit-buddon') Submit Review
           //- a(href=`/movies/${movie.id}`) Submit review
