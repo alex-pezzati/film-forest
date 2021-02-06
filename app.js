@@ -11,7 +11,7 @@ const mainRouter = require('./routes/main-page')
 const { restoreUser, requireAuth } = require('./auth');
 const movieRouter = require('./routes/movies')
 const reviewRouter = require('./routes/reviews')
-const dashboardRouter = require('./routes/dashboard')
+const myMoviesRouter = require('./routes/my-movies')
 
 const app = express();
 
@@ -48,7 +48,7 @@ app.use('/users', usersRouter);
 app.use('/movies', movieRouter)
 app.use('/reviews', reviewRouter)
 app.use(requireAuth)
-app.use('/dashboard', dashboardRouter)
+app.use('/my-movies', myMoviesRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -6,7 +6,7 @@ const router = express.Router()
 router.get('/', asyncHandler(async(req, res) => {
     const movies = await Movie.findAll()
 
-    res.render('dashboard', { movies })
+    res.render('my-movies', { movies })
 }))
 
 
