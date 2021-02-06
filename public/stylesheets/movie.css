@@ -5,7 +5,6 @@
     grid-template-columns: 15% 1fr 3fr 15%;
     grid-template-rows: 30% 10% 10% 5% 5% 10% 10% 20%;
     grid-template-areas:
-        /* "mleft . . mright " */
         "mleft image . mright "
         "mleft image title mright"
         "mleft image title mright"
@@ -15,6 +14,10 @@
         "mleft . description mright"
         "mleft addM description mright";
 
+}
+.top{
+  grid-area: top;
+  background: #32362D;
 }
 .addToList {
     grid-area: addM;

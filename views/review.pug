@@ -14,12 +14,13 @@ block content
       cell.movieDes
         div(class="movie-rev-description")= movie.description
       cell.movieRight
+      cell.movieBottom
     div(class="review")
       cell.top
       cell.left-space 
       form(method="post" action=`/reviews/${movie.id}` class='review-form')
         label(class='leave-review')= 'Leave Review Here'
         textarea(name="review" class="input-review")
-        button(type="submit" class='submit-buddon') Submit Review
+        button(type="submit" class='submit-buddon') Post Review
           //- a(href=`/movies/${movie.id}`) Submit review
       cell.right-space 
