@@ -130,7 +130,7 @@ module.exports = {
                 totalRating: .8,
                 createdAt: new Date(),
                 updatedAt: new Date(),
-                movieUrl: '/images/movies/princesBride.jpg'
+                movieUrl: '/images/movies/princessBride.jpg'
             },
             {
                 title: 'Finding Nemo',

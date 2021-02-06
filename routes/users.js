@@ -11,7 +11,7 @@ const { asyncHandler, csrfProtection } = require('./utils.js');
 router.get('/register', csrfProtection, (req, res) => {
     const user = db.User.build()
     if (res.locals.authenticated === true) {
-        res.redirect('/dashboard')
+        res.redirect('/my-movies')
     } else {
         res.render('user-register', {
             title: 'Register',
@@ -74,7 +74,7 @@ router.post('/register', csrfProtection, userValidators, asyncHandler(async(req,
         loginUser(req, res, user);
 
         return req.session.save(() => {
-            res.redirect('/dashboard');
+            res.redirect('/my-movies');
         })
 
     } else {
@@ -90,7 +90,7 @@ router.post('/register', csrfProtection, userValidators, asyncHandler(async(req,
 
 router.get('/login', csrfProtection, (req, res) => {
     if (res.locals.authenticated === true) {
-        res.redirect('/dashboard')
+        res.redirect('/my-movies')
     } else {
         res.render('user-login', {
             title: 'Login',
@@ -122,7 +122,7 @@ router.post('/login', csrfProtection, loginValidators, asyncHandler(async(req, r
 
             if (passwordMatch) {
                 loginUser(req, res, user);
-                return req.session.save(() => { res.redirect('/dashboard') });
+                return req.session.save(() => { res.redirect('/my-movies') });
             }
         }
         errors.push('Login failed, please check credentials')
@@ -139,11 +139,12 @@ router.post('/login', csrfProtection, loginValidators, asyncHandler(async(req, r
 
 
 router.post('/demo', asyncHandler(async(req, res) => {
+    console.log('DOES THIS WORK?')
     const demoUser = await db.User.findOne({ where: { email: 'demo@demo.com' } });
     loginUser(req, res, demoUser);
     return req.session.save((err) => {
         if (err) next(err);
-        else res.redirect(`/dashboard`)
+        else res.redirect('/my-movies')
     })
 }))
 

@@ -14,22 +14,3 @@ html
   body
     include includes/navbar.pug
     block content
-  //- nav
-  //-       if locals.authenticated
-  //-         form(action='/users/logout' method='post')
-  //-           button(type='submit') Logout
-  //-       else
-  //-         h1 Welcome to Film Forest
-  //-         button: a(href='/users/login' ) Login
-  //-         button: a(href='/users/register') Registe
-  //-
-  //-   nav
-  //-     div
-  //-       ul
-  //-         if locals.authenticated
-  //-           form(action='/users/logout' method='post')
-  //-             button(type='submit') Logout
-  //-         else
-  //-           span
-  //-             a(href='/users/login') Login
-  //-             a(href='/users/register') Register

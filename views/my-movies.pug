@@ -1,0 +1,33 @@
+extends layout.pug
+
+block content
+    .container
+        //- cell.navBar3
+        //- cell.navBarRight
+        .cell.cell-1
+        .cell.cell-2 My Movies To Watch Watched
+        .cell.cell-3
+        .cell.cell-4
+        .cell.cell-5
+        .cell.cell-13
+            table.GeneratedTable.sortable
+                thead
+                    tr
+                        th Poster
+                        th Title
+                        th Average Rating
+                        th Genre
+                tbody
+                    each movie in movies
+                        tr
+                            td: a(href=`/movies/${movie.id}`)
+                                img(src=`${movie.movieUrl}` height='100px')
+                            td: a(href=`/movies/${movie.id}`)= movie.title
+                            td
+                                if movie.totalRating > .50
+                                    span.fire=  '🔥'
+                                if movie.totalRating < .50
+                                    span.Disaster= '🌪'
+                                span= Math.floor(movie.totalRating * 100)+'%'
+                            td= movie.genre
+        .cell.cell-6
