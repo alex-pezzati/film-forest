@@ -3,13 +3,14 @@
     background-size: contain;
     display: flex;
     justify-content: center;
+    height: 75px;
     /* background-color: grey */
 }
 
 .navbar_container {
     display: flex;
     margin-left: 20rem;
-    justify-content: center;
+    /* justify-content: center; */
     width: 80%;
     min-width: 720px;
 }
@@ -36,6 +37,18 @@
     margin-right: 180px;
 }
 
+.button {
+    font-weight: 800;
+    background-color: rgb(244, 241, 234, .4);
+    border-radius: 6px;
+    align-items: center;
+    color: black;
+    width: 25%;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+}
+
 .navbar_list li {
     font-weight: 800;
     background-color: rgb(244, 241, 234, .4);
@@ -56,13 +69,13 @@
 .logout {
     border: none;
 }
+
 .navbar_search {
     display: flex;
     align-items: center;
 }
 
 .navbar_search input {
-    width: 20%;
     height: 32px;
 }
 
@@ -72,7 +85,7 @@
 }
 
 .alert-danger {
-    color:  red;
+    color: red;
     border: 2px solid black;
     border-radius: 10px;
     text-align: center;
