@@ -6,13 +6,11 @@
     grid-template-areas:
         "left . . right "
         "left . . right "
-        " left revImage . right"  
-        " left revImage . right"  
-        /* " left revImage revTitle right"   */
-        " left revImage revTitle right"  
-        " left revImage revGenre right"  
-        /* " left revImage revDescription right"   */
-        " left . revDescription right"
+        "left revImage . right"  
+        "left revImage . right"  
+        "left revImage revTitle right"  
+        "left revImage revGenre right"  
+        "left . revDescription right"
         "left . . right "
         "left . . right ";
 }
@@ -68,29 +66,70 @@
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 80px;
+    padding-right: 80px;
     height: 400px;
-    margin: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
     border: 0px;
     border-top: slategrey thin solid;
     border-radius: 0px;
+    grid-area: reviewF;
+}
+.review{
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 10% 90%;
+    grid-template-areas:
+    "top top top"
+    "leftS reviewF rightS";
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+}
+.left-space{
+    grid-area: leftS;
+    background: #d4d2cc;  
 }
 
+.top{
+     grid-area: top;
+     background: #d4d2cc;
+}
+
+.right-space {
+    grid-area: rightS;
+    background: #d4d2cc
+}
 .input-review {
-    height: 50%;
-    width: 100%;
-    justify-content: center;
+    background: url('/images/forest_background.jpg')  ;
+    opacity: .500;
+    height: 300px;
+    width: 90%;
+    justify-self: center;
+    align-self: center;
+    border: 1px solid #888;
+    background-color:rgb(244, 241, 234, .85);
+    resize: none;
+
 }
 
 .submit-buddon {
     width: 20%;
     justify-content: center;
     align-self: center;
+    margin: 20px;
 }
 
 .leave-review {
     align-self: center;
     font-size: 30px;
     padding-bottom: 20px;
+}
+
+textarea {
+    background: url(images/benice.png) center center no-repeat;
+    /* This ruins default border */
+    border: 1px solid #888;
 }
