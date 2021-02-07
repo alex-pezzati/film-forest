@@ -55,4 +55,9 @@ div input {
     text-align: center;
     background-color: #ffffff;
     margin-top: 10px;
+    margin-left: 320px
+}
+
+.ulStyle {
+    margin: 25px;
 }

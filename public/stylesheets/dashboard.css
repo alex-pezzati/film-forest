@@ -1,4 +1,5 @@
 .container {
+    background: #e9f5e7;
     display: grid;
     grid-template-columns: 17% 1fr 1fr 1fr 17%;
     grid-template-rows: auto;
@@ -7,7 +8,7 @@
 
 .navBarLeft {
     grid-area: headerLeft;
-    background-image: url('../images/5341781-vector-old-celluloid-film-tape.PNG');
+    background: #e9f5e7;
     background-size: cover;
 }
 
@@ -17,7 +18,7 @@
 
 .navBarRight {
     grid-area: headerRight;
-    background-image: url('../images/5341781-vector-old-celluloid-film-tape.PNG');
+    background: #e9f5e7;
     background-size: cover;
 }
 
@@ -30,6 +31,7 @@
 
 .cell-1 {
     grid-area: space1;
+    background: #e9f5e7;
 }
 
 .cell-2 {
@@ -42,6 +44,7 @@
 
 .cell-4 {
     grid-area: space3;
+    background: #e9f5e7;
 }
 
 .cell-5 {
@@ -55,7 +58,8 @@
 }
 
 .cell-6 {
-    grid-area: space5
+    grid-area: space5;
+    background: #e9f5e7;
 }
 
 table.GeneratedTable {

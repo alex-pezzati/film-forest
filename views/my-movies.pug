@@ -53,3 +53,23 @@ block content
                 //-                 span= Math.floor(movie.totalRating * 100)+'%'
                 //-             td= movie.genre
         .cell.cell-6
+
+            //- table.GeneratedTable.sortable
+            //-     thead
+            //-         tr: th.tableHead(colspan = 3) The Best Movies
+            //-         tr
+            //-             td Poster
+            //-             td Title
+            //-             td Average Rating
+            //-     tbody.tableBody
+            //-         each movie in moviesBest
+            //-             tr
+            //-                 td: a(href=`/movies/${movie.id}`)
+            //-                     img(src=`${movie.movieUrl}` width='100%')
+            //-                 td: a(href=`/movies/${movie.id}`)= movie.title
+            //-                 td
+            //-                     if movie.totalRating > .70
+            //-                         span.fire=  '🔥 '
+            //-                     if movie.totalRating < .69
+            //-                         span.Disaster= '🌪 '
+            //-                     span= Math.floor(movie.totalRating * 100)+'%'
