@@ -1,6 +1,12 @@
+html {
+    background: #184d47;
+}
+
 .login-container {
-    background-image: url('../images/GettyImages-1146804505.PNG');
     background-size: contain;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
 }
 
 .form_container {
@@ -13,7 +19,7 @@
     border-radius: 10px;
     padding: 10px;
     background-color: rgb(244, 241, 234, .85);
-    ;
+    margin-left: 110px
 }
 
 div input {
@@ -45,4 +51,11 @@ div input {
     text-align: center;
     background-color: rgb(255, 255, 255, .8);
     margin-top: 10px;
+    width: 67%;
+    margin-left: 320px
 }
+
+.ulStyle {
+    margin: 25px;
+}
+
