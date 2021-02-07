@@ -3,7 +3,6 @@ module.exports = (sequelize, DataTypes) => {
   const Dashboard = sequelize.define('Dashboard', {
     name: DataTypes.STRING,
     userId: DataTypes.INTEGER,
-    movieId: DataTypes.INTEGER
   }, {});
   Dashboard.associate = function(models) {
 		Dashboard.belongsTo(models.User, { foreignKey: 'userId' });
