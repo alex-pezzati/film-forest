@@ -1,5 +1,6 @@
 .navbar {
-    background-image: url('../images/5341781-vector-old-celluloid-film-tape.PNG');
+    /* background-image: url('../images/5341781-vector-old-celluloid-film-tape.PNG'); */
+    background-color: #184d47;
     background-size: contain;
     display: flex;
     justify-content: center;
@@ -33,36 +34,57 @@
     display: flex;
     list-style: none;
     width: 400px;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin-right: 180px;
 }
 
-.button {
-    font-weight: 800;
-    background-color: rgb(244, 241, 234, .4);
-    border-radius: 6px;
-    align-items: center;
-    color: black;
-    width: 25%;
-    justify-content: center;
-    text-decoration: none;
+.buttonMovies {
     text-align: center;
+    margin-left: 8px;
+    color: #ffffff;
+    /* padding: 5px; */
+    border: 0px;
+    border-radius: 4px;
+    background-color: #382110;
+    font-size: 18px;
+    line-height: 32px;
+    /* width: 15%; */
+    cursor: pointer
+}
+
+.buttonMovies:hover,
+.buttonLogout:hover {
+    background-color: rgb(155, 172, 222);
+}
+
+.buttonLogout {
+    text-align: center;
+    margin-left: 8px;
+    color: #ffffff;
+    padding: 5px;
+    border: 0px;
+    border-radius: 4px;
+    background-color: #382110;
+    font-size: 18px;
+    line-height: 22px;
+    /* width: 15%; */
+    cursor: pointer
 }
 
 .navbar_list li {
     font-weight: 800;
-    background-color: rgb(244, 241, 234, .4);
+    /* background-color: rgb(244, 241, 234, .4); */
     border-radius: 6px;
     display: flex;
     align-items: center;
-    color: black;
+    /* color: black; */
     width: 25%;
     justify-content: center;
     text-decoration: none;
 }
 
 .navbar_list li:hover {
-    background-color: #f4f1ea;
+    /* background-color: #f4f1ea; */
     cursor: pointer;
 }
 

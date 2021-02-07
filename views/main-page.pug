@@ -14,7 +14,7 @@ html
                 .navbar_container
                     .navbar_logo
                         a(href='/')
-                            img(src='/images/FFLogo.png')
+                            img(src='/images/FFGREENBIG.png')
                     //- +validationErrorSummary(errors)
                     if locals.authenticated
                     .navbar_container2.form-inline
@@ -54,10 +54,6 @@ html
         .movie-info1
             table.GeneratedTable.sortable
                 th The Best Movies
-                    tr
-                        th
-                        th
-                        th
                 tbody
                     each movie in moviesBest
                         tr
@@ -72,10 +68,6 @@ html
                                 span= Math.floor(movie.totalRating * 100)+'%'
             table.GeneratedTable.sortable
                 th The Worst Movies
-                    tr
-                        th
-                        th
-                        th
                 tbody
                     each movie in moviesWorst
                         tr
