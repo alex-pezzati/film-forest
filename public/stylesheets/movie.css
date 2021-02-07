@@ -1,34 +1,42 @@
+.movieBody{
+    background: #e8f6e7;
+}
+.movieTop{
+    height: 10px;
+    width: 100%;
+    background: #184D47;
+}
 .movie-div {
     height: 500px;
-    padding: 50px;
     display: grid;
-    grid-template-columns: 15% 1fr 3fr 15%;
-    grid-template-rows: 10% 20% 10% 10% 5% 5% 10% 20% 10%;
-    grid-template-areas: "mtop mtop mtop mtop" "mleft image . mright " "mleft image title mright" "mleft image title mright" "mleft image genre mright" "mleft image release mright" "mleft image ratings mright" "mleft . description mright" "mleft addM description mright";
-    margin: 50px;
-    margin-top: 0%;
+    grid-template-columns: 5%;
+    grid-template-rows: 10% 15% 15% 5% 5% 5% 20% 25%;
+    grid-template-areas: ". . . ."
+    ". image title ."
+    ". image title ."
+    ". image genre ."
+    ". . release ."
+    ". . ratings ."
+    ". . description ."
+    ". addM description .";
+    margin: 280px;
+    margin-top: 3%;
     margin-bottom: 0%;
+    background: ghostwhite;
+    border: #aec8aa solid 1px;
+    border-radius: 8px;
+    padding-right: 40px;
 }
 
-.mtop {
-    grid-area: mtop;
-    background: #32362D;
+.selectB{
+    margin-left: 15px;
 }
 
 .addToList {
     grid-area: addM;
+    padding-top: 10px;
     padding-left: 20%;
     padding-right: 20%;
-}
-
-.mright {
-    grid-area: mright;
-    background: #32362D;
-}
-
-.mleft {
-    grid-area: mleft;
-    background: #32362D;
 }
 
 .title {
@@ -45,6 +53,7 @@
 
 .release {
     grid-area: release;
+    margin-top: 10px;
 }
 
 .ratings {
@@ -56,83 +65,79 @@
 }
 
 .movie-img {
-    padding-bottom: 10px;
+    padding: 30px;
+    padding-top: 10px;
+    padding-bottom: 17px;
     width: 242px;
     height: 330px;
+    border-radius: 4px;
 }
 
 .movie-title {
-    /* padding-top: 60px; */
-    padding-bottom: 0%;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 50px;
+        padding-bottom: 0%;
+        font-family: Arial;
+        font-size: 50px;
+        margin-top: 49px;
 }
 
 .movie-genre {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 20px;
+        font-family: Arial;
+        font-size: 20px;
+        margin-top: 10px;
 }
 
 .movie-release {
-    /* padding-top: 0%;
-    padding-bottom: 0%; */
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Arial;
     font-size: 12px;
 }
 
 .movie-ratings {
     padding-top: 0%;
     padding-bottom: 0%;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Arial;
     font-size: 13px;
 }
 
 .movie-description {
     padding-top: 0%;
     padding-bottom: 30px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Arial;
     font-size: 20px;
 }
 
 .review-div {
-    /* background: #32362D; */
     margin-left: 100px;
     margin-right: 100px;
     margin-bottom: 50px;
     padding-top: 40px;
-    border-top: rgb(175, 181, 187) solid thin;
     display: flex;
     justify-content: center;
     flex-direction: row;
 }
 
 .review-label {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Arial;
     font-size: 30px;
-}
-
-.upvotesDownvotes {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 20px;
 }
 
 .review-button {
     background-color: rgb(223, 213, 213);
     margin-left: 30px;
     border-radius: 4px;
-    background-color: #382110;
+    background-color: #0b3507;
     color: #ffffff;
     height: 50px;
     width: 175px;
 }
 
 .single-review {
-    background: #f0eeea;
-    padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 5px;
-    display: flex;
-    flex-direction: column-reverse;
+        border-bottom: #aec8aa solid 1px;
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        margin-right: 80px;
+        display: flex;
+        flex-direction: column-reverse;
 }
 
 .user {
@@ -142,51 +147,64 @@
 
 .movie-reviews {
     justify-self: right;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Arial;
     font-size: 15px;
     margin-left: 80px;
     margin-right: 10px;
 }
 
 .reviews-div {
-    display: grid;
-    grid-template-columns: 15% 70% 15%;
-    grid-template-rows: 10% 10% 70% 10%;
-    grid-template-areas: ". . ." "Rleft userR Rright" "Rleft singleR Rright" "Rleft Rbottom Rright";
-    border-top: rgb(175, 181, 187) solid thin;
-    height: 500px;
-    margin-left: 100px;
-    margin-right: 100px;
+       display: grid;
+       grid-template-columns: 10% 90%;
+       grid-template-rows: 20% 10% 60% 10%;
+       grid-template-areas: 
+       "userR userR"
+       "Rtop Rtop"
+       "Rleft singleR"
+       "Rleft Rbottom";
+       height: 300px;
+       margin-left: 280px;
+       margin-right: 280px;
+       margin-bottom: 55px;
+       border: solid #aec8aa 1px;
+       border-radius: 7px;
+}
+.Rtop{
+ background: #e8f6e7;
+ grid-area: Rtop;
+}
+.userR {
+    padding-left: 40%;
+    padding-top: 15px;
+    grid-area: userR;
+    background: #aec8aa;
+    border-bottom: solid #0b3507 1px;
 }
 
-.userR {
-    font-size: 20px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding-left: 40%;
-    padding-top: 20px;
-    grid-area: userR;
-    background: #d4d2cc;
+.user-reviews {
+    font-size: 30px;
+    font-family: Arial;
 }
 
 .Rleft {
     grid-area: Rleft;
-    background: #d4d2cc
+    background: #e8f6e7;
 }
 
 .singleR {
     overflow-y: scroll;
     grid-area: singleR;
-    background: #d4d2cc
+    background: #e8f6e7;
 }
 
 .Rright {
     grid-area: Rright;
-    background: #d4d2cc
+    background: #e8f6e7
 }
 
 .Rbottom {
     grid-area: Rbottom;
-    background: #d4d2cc
+    background: #e8f6e7
 }
 
 .alert-danger {
@@ -201,4 +219,10 @@
 .add-movie {
     width: 90px;
     margin-left: 20%;
+}
+
+.pageBottom {
+    height: 50px;
+    width: 100%;
+    background: #184D47;
 }
