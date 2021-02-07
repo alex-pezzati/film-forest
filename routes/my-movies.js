@@ -17,15 +17,18 @@ router.post('/:id(\\d+)', asyncHandler(async (req, res) => {
     // const dashboardId = req.body;
     // const userId = res.locals.user.id;
 
-        console.log('IM INSIDE THIS POST!!!!!!!!!!!!!!!!!!')
-        console.log(movieId)
-        console.log(req.body.dashboardId)
+    console.log('IM INSIDE THIS POST!!!!!!!!!!!!!!!!!!')
+    console.log(movieId)
+    console.log(req.body.dashboardId)
 
-    await MoviesDashboard.create({
+    try {
+        await MoviesDashboard.create({
         dashboardId: req.body.dashboardId,
         movieId: req.params.id
-    });
-    // console.log(userId)
+        });
+    } catch (e) {
+        console.error(e)
+    }
 
     res.redirect(`/movies/${movieId}`);
 }));
