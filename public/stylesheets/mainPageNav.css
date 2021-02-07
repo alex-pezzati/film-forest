@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     /* background-image: url('../images/5341781-vector-old-celluloid-film-tape.PNG'); */
-    background-color: #184d47;
+    background-color: #e8f6e7;
     background-size: contain;
     height: 75px;
 }
@@ -14,7 +14,7 @@
 }
 
 .navbar_logo img {
-    width: 140px;
+    width: 180px;
     height: 100%;
     object-fit: fill;
     border-radius: 5px;
@@ -47,7 +47,7 @@
     padding: 5px;
     border: 0px;
     border-radius: 4px;
-    background-color: #382110;
+    background-color: #0b3507;
     font-size: 18px;
     line-height: 22px;
     /* width: 15%; */
@@ -63,7 +63,7 @@
     padding: 8px;
     border: 0px;
     border-radius: 4px;
-    background-color: #382110;
+    background-color: #0b3507;
     font-size: 18px;
     line-height: 22px;
     width: auto;
@@ -84,7 +84,7 @@ form button:hover {
 .navBarLeft {
     grid-area: headerLeft;
     /* background-image: url('../images/5341781-vector-old-celluloid-film-tape.PNG'); */
-    background-color: #184d47;
+    background-color: #e8f6e7;
     background-size: cover;
 }
 
@@ -95,13 +95,13 @@ form button:hover {
 .navBarRight {
     grid-area: headerRight;
     /* background-image: url('../images/5341781-vector-old-celluloid-film-tape.PNG'); */
-    background-color: #184d47;
+    background-color: #e8f6e7;
     background-size: cover;
 }
 
 .topBannerLeft {
     grid-area: leftBanner;
-    background: #32362D;
+    background: #184D47;
 }
 
 .movie-night {
@@ -109,7 +109,7 @@ form button:hover {
     font-size: x-large;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     grid-area: mainBanner;
-    background: #32362D;
+    background: #184D47;
     background-image: url('../images/movie_reel.png');
     background-size: 60%;
     background-position: center;
@@ -124,12 +124,12 @@ form button:hover {
 
 .topBannerRight {
     grid-area: rightBanner;
-    background: #32362D;
+    background: #184D47;
 }
 
 .first-left-margin {
     grid-area: leftFirst;
-    background: #d4d2cc;
+    background: #e8f5e7;
 }
 
 .movie-info1 {
@@ -141,7 +141,7 @@ form button:hover {
 
 .first-right-margin {
     grid-area: rightFirst;
-    background: #d4d2cc;
+    background: #e8f5e7;
 }
 
 .second-left-margin {
