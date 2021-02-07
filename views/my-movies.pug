@@ -19,15 +19,37 @@ block content
                         th Genre
                 tbody
                     each movie in movies
-                        tr
-                            td: a(href=`/movies/${movie.id}`)
-                                img(src=`${movie.movieUrl}` height='100px')
-                            td: a(href=`/movies/${movie.id}`)= movie.title
-                            td
-                                if movie.totalRating > .70
-                                    span.fire=  '🔥'
-                                if movie.totalRating < .69
-                                    span.Disaster= '🌪'
-                                span= Math.floor(movie.totalRating * 100)+'%'
-                            td= movie.genre
+                        each savedMovie in myDashboardMovies
+                            if movie.id===savedMovie.movieId
+                                tr
+                                    td: a(href=`/movies/${movie.id}`)
+                                        img(src=`${movie.movieUrl}` height='100px')
+                                    td: a(href=`/movies/${movie.id}`)= movie.title
+                                    td
+                                        if movie.totalRating > .70
+                                            span.fire=  '🔥'
+                                        if movie.totalRating < .69
+                                            span.Disaster= '🌪'
+                                        span= Math.floor(movie.totalRating * 100)+'%'
+                                    td= movie.genre
+                                                table.GeneratedTable.sortable
+                //- thead
+                //-     tr
+                //-         th Poster
+                //-         th Title
+                //-         th Average Rating
+                //-         th Genre
+                //- tbody
+                //-     each movie in movies
+                //-         tr
+                //-             td: a(href=`/movies/${movie.id}`)
+                //-                 img(src=`${movie.movieUrl}` height='100px')
+                //-             td: a(href=`/movies/${movie.id}`)= movie.title
+                //-             td
+                //-                 if movie.totalRating > .70
+                //-                     span.fire=  '🔥'
+                //-                 if movie.totalRating < .69
+                //-                     span.Disaster= '🌪'
+                //-                 span= Math.floor(movie.totalRating * 100)+'%'
+                //-             td= movie.genre
         .cell.cell-6
