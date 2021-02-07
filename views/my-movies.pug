@@ -24,9 +24,9 @@ block content
                                 img(src=`${movie.movieUrl}` height='100px')
                             td: a(href=`/movies/${movie.id}`)= movie.title
                             td
-                                if movie.totalRating > .50
+                                if movie.totalRating > .70
                                     span.fire=  '🔥'
-                                if movie.totalRating < .50
+                                if movie.totalRating < .69
                                     span.Disaster= '🌪'
                                 span= Math.floor(movie.totalRating * 100)+'%'
                             td= movie.genre
