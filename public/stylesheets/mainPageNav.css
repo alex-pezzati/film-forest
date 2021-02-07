@@ -182,8 +182,7 @@ form button:hover {
 .movie-info1 {
     justify-content: center;
     grid-area: main;
-    background: #ffffff;
-    margin-top: 10px;
+    background: #e9f5e7;
     border-radius: 8px;
     overflow: hidden;
 }
@@ -195,12 +194,12 @@ form button:hover {
 
 .second-left-margin {
     grid-area: leftSecond;
-    background: #ffffff;
+    background: #e9f5e7;
 }
 
 .movie-info2 {
     grid-area: main2;
-    background: #f4f1ea;
+    background: #e9f5e7;
 }
 
 .mainSidebar {
@@ -219,14 +218,14 @@ table.GeneratedTable.sortable td:nth-child(1) {
 
 .second-right-margin {
     grid-area: rightSecond;
-    background: #ffffff;
+    background: #e9f5e7;
 }
 
 .footer {
     /* background-color: purple; */
     height: 75px;
     grid-area: footer;
-    image: url('../images/5341781-vector-old-celluloid-film-tape.PNG');
+    background: #e9f5e7;
     justify-content: stretch;
 }
 
@@ -324,4 +323,30 @@ table.GeneratedTable thead {
 
 button#carousel-right {
     float: right;
+}
+
+button#carousel-right,
+button#carousel-left {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background-image: url(../images/rightArrow.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: 0.25rem solid transparent;
+    border-radius: 50%;
+    font-size: 0;
+    transition: transform 0.1s;
+    cursor: pointer;
+    transform: translateY(160px);
+}
+
+button#carousel-right:hover,
+button#carousel-left:hover {
+    opacity: .75
+}
+
+button#carousel-left {
+    transform: scaleX(-1) translateY(160px);
 }

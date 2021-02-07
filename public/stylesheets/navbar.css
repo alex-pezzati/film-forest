@@ -5,6 +5,7 @@
     display: flex;
     justify-content: center;
     height: 75px;
+    border-bottom: 1px solid #4b6a48;
     /* background-color: grey */
 }
 
