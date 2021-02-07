@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap');
 .navbar {
     display: flex;
     justify-content: center;
@@ -23,6 +24,7 @@
 .form-inline {
     display: flex;
     align-items: center;
+    margin-left: -18px;
 }
 
 
@@ -41,7 +43,7 @@
 
 /* Style the submit button */
 
-.form-inline button {
+.buttonDemo {
     margin-left: 8px;
     color: #ffffff;
     padding: 5px;
@@ -54,8 +56,25 @@
     cursor: pointer
 }
 
+.buttonLogin {
+    margin-left: 8px;
+    color: #ffffff;
+    padding: 5px;
+    border: 0px;
+    border-radius: 4px;
+    background-color: #0b3507;
+    font-size: 18px;
+    line-height: 22px;
+    width: 16%;
+    cursor: pointer
+}
+
 .form-inline button:hover {
     background-color: rgb(155, 172, 222);
+}
+
+.formClass {
+    margin-left: 10px;
 }
 
 .button {
@@ -70,15 +89,41 @@
     cursor: pointer;
 }
 
+.registerText {
+    font-family: arial;
+    margin-left: 4px;
+    margin-top: 9px;
+    margin-bottom: -8px;
+    font-weight: bold;
+}
+
 form button:hover {
     background-color: rgb(155, 172, 222);
+}
+
+.tableHead {
+    background: #79b54f;
+}
+
+.tableBody {
+    background: #E1E2E1
+}
+
+.button2 {
+    border-radius: 4px;
+    width: 300px;
+    height: 30px;
+    padding: 7px 5px;
+    font-size: 16px;
+    margin-bottom: -8px;
+    border: 1px solid #ddd
 }
 
 .container {
     display: grid;
     grid-template-columns: 15% 1fr 1fr 1fr 15%;
     grid-template-rows: auto;
-    grid-template-areas: "headerLeft header header header headerRight" "leftBanner mainBanner mainBanner registerForm rightBanner" "leftFirst main main main rightFirst" "leftSecond mainSecond mainSecond mainSecond rightSecond" "footer footer footer footer footer";
+    grid-template-areas: "headerLeft header header header headerRight" "leftBanner mainBanner mainBanner registerForm rightBanner" "leftFirst main main main rightFirst" "leftSecond main2 main2 main2 rightSecond" "footer footer footer footer footer";
 }
 
 .navBarLeft {
@@ -120,6 +165,8 @@ form button:hover {
     grid-area: registerForm;
     color: black;
     background: #f4f1ea;
+    display: flex;
+    justify-content: center;
 }
 
 .topBannerRight {
@@ -133,10 +180,12 @@ form button:hover {
 }
 
 .movie-info1 {
-    display: flex;
     justify-content: center;
     grid-area: main;
     background: #ffffff;
+    margin-top: 10px;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .first-right-margin {
@@ -150,8 +199,22 @@ form button:hover {
 }
 
 .movie-info2 {
-    grid-area: mainSecond;
+    grid-area: main2;
     background: #f4f1ea;
+}
+
+.mainSidebar {
+    grid-area: mainSidebar;
+    /* background: green; */
+}
+
+table.GeneratedTable.sortable td:nth-child(3) {
+    padding-right: 10px;
+    text-align: right;
+}
+
+table.GeneratedTable.sortable td:nth-child(1) {
+    padding-left: 10px;
 }
 
 .second-right-margin {
@@ -201,3 +264,64 @@ form div {
     width: 200%;
     justify-content: flex-start;
 } */
+
+
+/* TABLES */
+
+
+/* table.GeneratedTable {
+    width: 100%;
+    background-color: #ffffff;
+    border-collapse: collapse;
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    color: #000000;
+}
+
+table.GeneratedTable td,
+table.GeneratedTable th {
+    border-width: 1px;
+    border-color: #000000;
+    border-style: hidden;
+    padding: 3px;
+}
+
+table.GeneratedTable thead {
+    background-color: #aae87e;
+} */
+
+
+/* CAROUSAL */
+
+.card-container {
+    scroll-behavior: smooth;
+    display: flex;
+    background: #F5F5F6;
+    padding: 10px;
+    overflow: scroll;
+}
+
+.card {
+    min-width: 150px;
+    background: #E1E2E1;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-right: 30px;
+}
+
+.text-container {
+    padding: 10px;
+}
+
+.title {
+    font-family: 'Noto Sans JP';
+}
+
+.score {
+    font-family: 'Noto Sans JP';
+}
+
+button#carousel-right {
+    float: right;
+}

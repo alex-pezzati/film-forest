@@ -1,6 +1,6 @@
 .navbar {
     /* background-image: url('../images/5341781-vector-old-celluloid-film-tape.PNG'); */
-    background-color: #184d47;
+    background-color: #e8f6e7;
     background-size: contain;
     display: flex;
     justify-content: center;
@@ -10,18 +10,18 @@
 
 .navbar_container {
     display: flex;
-    margin-left: 20rem;
-    /* justify-content: center; */
-    width: 80%;
+    /* margin-left: 20rem; */
+    justify-content: space-between;
+    width: 67%;
     min-width: 720px;
+    margin-right: 23px;
 }
 
 .navbar_logo img {
-    width: 140px;
-    height: 53px;
-    object-fit: cover;
+    width: 180px;
+    height: 100%;
+    object-fit: fill;
     border-radius: 5px;
-    margin-top: 3px
 }
 
 .navbar_user img {
@@ -35,21 +35,21 @@
     list-style: none;
     width: 400px;
     justify-content: flex-start;
-    margin-right: 180px;
+    margin-right: 350px;
 }
 
 .buttonMovies {
     text-align: center;
-    margin-left: 8px;
+    /* margin-left: 8px; */
     color: #ffffff;
-    /* padding: 5px; */
+    padding: 5px;
     border: 0px;
     border-radius: 4px;
-    background-color: #382110;
+    background-color: #0b3507;
     font-size: 18px;
-    line-height: 32px;
+    line-height: 23px;
     /* width: 15%; */
-    cursor: pointer
+    cursor: pointer;
 }
 
 .buttonMovies:hover,
@@ -59,16 +59,16 @@
 
 .buttonLogout {
     text-align: center;
-    margin-left: 8px;
+    margin-left: -5px;
     color: #ffffff;
     padding: 5px;
     border: 0px;
     border-radius: 4px;
-    background-color: #382110;
+    background-color: #0b3507;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 23px;
     /* width: 15%; */
-    cursor: pointer
+    cursor: pointer;
 }
 
 .navbar_list li {
@@ -78,9 +78,10 @@
     display: flex;
     align-items: center;
     /* color: black; */
-    width: 25%;
+    width: 101px;
     justify-content: center;
     text-decoration: none;
+    margin-left: 8px;
 }
 
 .navbar_list li:hover {
@@ -99,6 +100,7 @@
 
 .navbar_search input {
     height: 32px;
+    width: 300px;
 }
 
 .navbar_user {

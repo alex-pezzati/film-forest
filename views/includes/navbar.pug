@@ -5,7 +5,7 @@ append head
     .navbar_container
         .navbar_logo
             a(href='/')
-                img(src='/images/FilmForestLogo.png')
+                img(src='/images/FFGREENBIG.png')
         if locals.authenticated
             ul.navbar_list
                 li: a.buttonMovies(href='/my-movies') My Movies
@@ -14,7 +14,7 @@ append head
             .navbar_search
                 input(type='search' placeholder='Search Movies')
             .navbar_user
-                a(href='/'): img(src='/images/FFminiLogo.png')
+                a(href='/'): img(src='/images/FFGREENLITTLE.png')
         else
             ul.navbar_list
                 li: a.buttonMovies(href='/my-movies') My Movies

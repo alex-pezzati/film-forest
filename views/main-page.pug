@@ -5,6 +5,7 @@ html
         title= "Film Forest"
         link(rel='stylesheet' href='/stylesheets/reset.css')
         link(rel='stylesheet' href='/stylesheets/mainPageNav.css')
+        script(src='/javascripts/carousal.js')
   body
     .container
         .navBarLeft
@@ -23,28 +24,28 @@ html
                             input(type='text' name='email' placeholder='Enter email')
                             input(type='password' name='password' placeholder='Enter password')
                             a(href='/users/register')
-                            button(class='button' type='submit') Login
+                            button.buttonLogin(type='submit') Login
                         form.form-inline(method='post' action='/users/demo')
-                            button(class='button' type='submit') Demo Login
+                            button.buttonDemo(type='submit') Demo Login
         .navBarRight
         .topBannerLeft
-        .movie-night Movie Night!
-        .register
-            form(method="POST" action="/users/register")
+        .movie-night 
+        .register.register-form
+            form.formClass(method="POST" action="/users/register")
                 input(type='hidden' name='_csrf' value=csrfToken)
-                div Don't have an account? Register here!
+                div.registerText Don't have an account? Register here!
                 div
                     label(class='label1')
-                    input(type='text' name='firstName' placeholder='First Name')
+                    input.button2(type='text' name='firstName' placeholder='First Name')
                 div
                     label(class='label2')
-                    input(type='text' name='lastName' placeholder='Last Name')
+                    input.button2(type='text' name='lastName' placeholder='Last Name')
                 div
                     label(class='label4')
-                    input(type='text' name='email' placeholder='Email')
+                    input.button2(type='text' name='email' placeholder='Email')
                 div
                     label(class='label5')
-                    input(type='password' name='password' placeholder='Password')
+                    input.button2(type='password' name='password' placeholder='Password')
                 div
                     button(class='button' type='submit') Submit
         .topBannerRight
@@ -52,35 +53,59 @@ html
         .second-right-margin
         .footer
         .movie-info1
-            table.GeneratedTable.sortable
-                th The Best Movies
-                tbody
+            .carousel
+                button#carousel-left LEFT
+                button#carousel-right RIGHT
+                .card-container
                     each movie in moviesBest
-                        tr
-                            td: a(href=`/movies/${movie.id}`)
-                                img(src=`${movie.movieUrl}` height='100px')
-                            td: a(href=`/movies/${movie.id}`)= movie.title
-                            td
-                                if movie.totalRating > .50
-                                    span.fire=  '🔥'
-                                if movie.totalRating < .50
-                                    span.Disaster= '🌪'
-                                span= Math.floor(movie.totalRating * 100)+'%'
-            table.GeneratedTable.sortable
-                th The Worst Movies
-                tbody
-                    each movie in moviesWorst
-                        tr
-                            td: a(href=`/movies/${movie.id}`)
-                                img(src=`${movie.movieUrl}` height='100px')
-                            td: a(href=`/movies/${movie.id}`)= movie.title
-                            td
-                                if movie.totalRating > .50
-                                    span.fire=  '🔥'
-                                if movie.totalRating < .50
-                                    span.Disaster= '🌪'
-                                span= Math.floor(movie.totalRating * 100)+'%'
+                        .card
+                            img.poster(width="100%", src=`${movie.movieUrl}`)
+                            .text-container
+                                a.title(href=`/movies/${movie.id}`)= movie.title
+                                .score
+                                    if movie.totalRating > .70
+                                        span.score.fire=  '🔥 '
+                                    if movie.totalRating < .69
+                                        span.score.Disaster= '🌪 '
+                                    span.score= Math.floor(movie.totalRating * 100)+'%'
+
+            //- table.GeneratedTable.sortable
+            //-     thead
+            //-         tr: th.tableHead(colspan = 3) The Best Movies
+            //-         tr
+            //-             td Poster
+            //-             td Title
+            //-             td Average Rating
+            //-     tbody.tableBody
+            //-         each movie in moviesBest
+            //-             tr
+            //-                 td: a(href=`/movies/${movie.id}`)
+            //-                     img(src=`${movie.movieUrl}` width='100%')
+            //-                 td: a(href=`/movies/${movie.id}`)= movie.title
+            //-                 td
+            //-                     if movie.totalRating > .70
+            //-                         span.fire=  '🔥 '
+            //-                     if movie.totalRating < .69
+            //-                         span.Disaster= '🌪 '
+            //-                     span= Math.floor(movie.totalRating * 100)+'%'
         .movie-info2
+            .carousel
+                button#carousel-left LEFT
+                button#carousel-right RIGHT
+                .card-container
+                    each movie in moviesWorst
+                        .card
+                            img.poster(width="100%", src=`${movie.movieUrl}`)
+                            .text-container
+                                a.title(href=`/movies/${movie.id}`)= movie.title
+                                .score
+                                    if movie.totalRating > .70
+                                        span.score.fire=  '🔥 '
+                                    if movie.totalRating < .69
+                                        span.score.Disaster= '🌪 '
+                                    span.score= Math.floor(movie.totalRating * 100)+'%'
+        .mainSidebar 
+            h1.
         .first-right-margin
         .second-left-margin
         .second-right-margin
