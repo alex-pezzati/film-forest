@@ -1,5 +1,5 @@
 const express = require('express')
-const { Movie, Review, Vote, User, Sequelize  } = require('../db/models')
+const { Movie, Review, Dashboard, Vote, User, Sequelize  } = require('../db/models')
 const { asyncHandler, csrfProtection } = require('./utils.js');
 const router = express.Router()
 
@@ -9,15 +9,18 @@ router.get('/:id(\\d+)', asyncHandler(async (req, res) => {
     const movie = await Movie.findByPk( movieId, { include:  Review })
     const reviews = movie.Reviews
 
-    console.log(movie)
-    console.log(movie.movieUrl, 'movie path')
+    const dashboards = await Dashboard.findAll({
+        where: {
+            userId: res.locals.user.id
+        }
+    });
 
     if(reviews.length === 0) {
-        res.render('movie', { movie })
+        res.render('movie', { dashboards, movie })
     } else {
         const users = await User.findAll()
 
-        res.render('movie', { title: movie.title, movie, reviews, users })
+        res.render('movie', { title: movie.title, dashboards, movie, reviews, users })
     }
 }))
 

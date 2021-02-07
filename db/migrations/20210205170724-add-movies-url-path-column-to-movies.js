@@ -11,6 +11,6 @@ module.exports = {
   },
 
   down: (queryInterface, Sequelize) => {
-      // return queryInterface.removeColumn('Movies', 'movieUrl');
+      return queryInterface.removeColumn('Movies', 'movieUrl');
   }
 };
