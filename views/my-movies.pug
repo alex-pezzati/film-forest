@@ -5,7 +5,10 @@ block content
         //- cell.navBar3
         //- cell.navBarRight
         .cell.cell-1
-        .cell.cell-2 My Movies To Watch Watched
+        .cell.cell-2
+            a(href="/my-movies") My Movies
+            a(href="/my-movies/to-watch") To Watch
+            a(href="/my-movies/watched") Watched
         .cell.cell-3
         .cell.cell-4
         .cell.cell-5
@@ -17,6 +20,7 @@ block content
                         th Title
                         th Average Rating
                         th Genre
+                        th
                 tbody
                     each movie in movies
                         each savedMovie in myDashboardMovies
@@ -33,43 +37,5 @@ block content
                                         span= Math.floor(movie.totalRating * 100)+'%'
                                     td= movie.genre
                                                 table.GeneratedTable.sortable
-                //- thead
-                //-     tr
-                //-         th Poster
-                //-         th Title
-                //-         th Average Rating
-                //-         th Genre
-                //- tbody
-                //-     each movie in movies
-                //-         tr
-                //-             td: a(href=`/movies/${movie.id}`)
-                //-                 img(src=`${movie.movieUrl}` height='100px')
-                //-             td: a(href=`/movies/${movie.id}`)= movie.title
-                //-             td
-                //-                 if movie.totalRating > .70
-                //-                     span.fire=  '🔥'
-                //-                 if movie.totalRating < .69
-                //-                     span.Disaster= '🌪'
-                //-                 span= Math.floor(movie.totalRating * 100)+'%'
-                //-             td= movie.genre
+                                    //- td: button.deleteButton(id=`${savedMovie.movieId}` type="button") X
         .cell.cell-6
-
-            //- table.GeneratedTable.sortable
-            //-     thead
-            //-         tr: th.tableHead(colspan = 3) The Best Movies
-            //-         tr
-            //-             td Poster
-            //-             td Title
-            //-             td Average Rating
-            //-     tbody.tableBody
-            //-         each movie in moviesBest
-            //-             tr
-            //-                 td: a(href=`/movies/${movie.id}`)
-            //-                     img(src=`${movie.movieUrl}` width='100%')
-            //-                 td: a(href=`/movies/${movie.id}`)= movie.title
-            //-                 td
-            //-                     if movie.totalRating > .70
-            //-                         span.fire=  '🔥 '
-            //-                     if movie.totalRating < .69
-            //-                         span.Disaster= '🌪 '
-            //-                     span= Math.floor(movie.totalRating * 100)+'%'
