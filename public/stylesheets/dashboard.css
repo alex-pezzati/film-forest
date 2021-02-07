@@ -1,66 +1,40 @@
 .container {
-    background: #e9f5e7;
-    display: grid;
-    grid-template-columns: 17% 1fr 1fr 1fr 17%;
-    grid-template-rows: auto;
-    grid-template-areas: "headerLeft header header header  headerRight" "space1 header1 space2 space2 space2 " "space3  data data data space5"
+  height: 90vh;
+  /* margin: 2rem; */
+  display:flex;
+  justify-content: center;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto; */
+  grid-template-areas: 
+  "space sideBar table table space2" 
 }
-
-.navBarLeft {
-    grid-area: headerLeft;
-    background: #e9f5e7;
-    background-size: cover;
-}
-
-.navBarBody {
-    grid-area: header;
-}
-
-.navBarRight {
-    grid-area: headerRight;
-    background: #e9f5e7;
-    background-size: cover;
-}
-
 .cell {
-    /* color: white; */
-    font-size: 1rem;
-    text-align: center;
-    padding: 1rem;
-}
-
-.cell-1 {
-    grid-area: space1;
-    background: #e9f5e7;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 2rem;
 }
 
 .cell-2 {
-    grid-area: header1;
+    display: inline-block;
+    width: 200px;
+    text-align: left;
 }
-
 .cell-3 {
-    grid-area: space2;
+    display: inline-block;
+    width: 50%;
 }
 
-.cell-4 {
-    grid-area: space3;
-    background: #e9f5e7;
+/* .cell-5 {
+  background: blueviolet;
 }
-
-.cell-5 {
-    grid-area: space4;
-}
-
-.cell-13 {
-    display: flex;
-    justify-content: left;
-    grid-area: data;
-}
-
 .cell-6 {
-    grid-area: space5;
-    background: #e9f5e7;
+  background: limegreen;
 }
+.cell-7 {
+  background: coral;
+} */
+
 
 table.GeneratedTable {
     width: 100%;
@@ -82,4 +56,25 @@ table.GeneratedTable th {
 
 table.GeneratedTable thead {
     background-color: #aae87e;
+}
+
+
+.myTable th {
+  padding: 10px 0px !important;
+}
+
+.myTable thead {
+    font-size: 20px;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 18px;
+}
+
+.myTable th:nth-child(2), .myTable td:nth-child(2) {
+    text-align: left;
+    width: 25%;
+}
+
+.myTable td:nth-child(1) {
+    width: 79px;
+    padding-right: 5px;
 }

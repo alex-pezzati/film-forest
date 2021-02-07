@@ -17,16 +17,21 @@ html
                         a(href='/')
                             img(src='/images/FFGREENBIG.png')
                     //- +validationErrorSummary(errors)
-                    if locals.authenticated
-                    .navbar_container2.form-inline
-                        form.form-inline(method='post' action='/users/login')
-                            input(type='hidden' name='_csrf' value=csrfToken)
-                            input(type='text' name='email' placeholder='Enter email')
-                            input(type='password' name='password' placeholder='Enter password')
-                            a(href='/users/register')
-                            button.buttonLogin(type='submit') Login
-                        form.form-inline(method='post' action='/users/demo')
-                            button.buttonDemo(type='submit') Demo Login
+                    if !locals.authenticated
+                        .navbar_container2.form-inline
+                            form.form-inline(method='post' action='/users/login')
+                                input(type='hidden' name='_csrf' value=csrfToken)
+                                input(type='text' name='email' placeholder='Enter email')
+                                input(type='password' name='password' placeholder='Enter password')
+                                a(href='/users/register')
+                                button.buttonLogin(type='submit') Login
+                            form.form-inline(method='post' action='/users/demo')
+                                button.buttonDemo(type='submit') Demo Login
+                    else
+                        ul.navbar_list
+                            li: a.buttonMovies(href='/my-movies') My Movies
+                            li: form(action='/users/logout' method='post')
+                                button.buttonLogout(type='submit') Logout
         .navBarRight
         .topBannerLeft
         .movie-night 

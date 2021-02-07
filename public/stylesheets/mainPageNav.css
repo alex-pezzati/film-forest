@@ -123,7 +123,7 @@ form button:hover {
     display: grid;
     grid-template-columns: 15% 1fr 1fr 1fr 15%;
     grid-template-rows: auto;
-    grid-template-areas: "headerLeft header header header headerRight" "leftBanner mainBanner mainBanner registerForm rightBanner" "leftFirst main main main rightFirst" "leftSecond main2 main2 main2 rightSecond" "footer footer footer footer footer";
+    grid-template-areas: "header header header header header" "leftBanner mainBanner mainBanner registerForm rightBanner" "leftFirst main main main rightFirst" "leftSecond main2 main2 main2 rightSecond" "footer footer footer footer footer";
 }
 
 .navBarLeft {
@@ -349,4 +349,74 @@ button#carousel-left:hover {
 
 button#carousel-left {
     transform: scaleX(-1) translateY(160px);
+}
+
+
+
+
+
+
+
+/* Logout and mymovies buttons on mainpage */
+
+.navbar_list {
+    display: flex;
+    list-style: none;
+    width: 400px;
+    justify-content: flex-end;
+}
+
+.buttonMovies {
+    text-align: center;
+    /* margin-left: 8px; */
+    color: #ffffff;
+    padding: 5px;
+    border: 0px;
+    border-radius: 4px;
+    background-color: #0b3507;
+    font-size: 18px;
+    line-height: 23px;
+    /* width: 15%; */
+    cursor: pointer;
+}
+
+.buttonMovies:hover,
+.buttonLogout:hover {
+    background-color: rgb(155, 172, 222);
+}
+
+.buttonLogout {
+    text-align: center;
+    margin-left: -5px;
+    color: #ffffff;
+    padding: 5px;
+    border: 0px;
+    border-radius: 4px;
+    background-color: #0b3507;
+    font-size: 18px;
+    line-height: 23px;
+    /* width: 15%; */
+    cursor: pointer;
+}
+
+.navbar_list li {
+    font-weight: 800;
+    /* background-color: rgb(244, 241, 234, .4); */
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    /* color: black; */
+    width: 101px;
+    justify-content: center;
+    text-decoration: none;
+    margin-left: 8px;
+}
+
+.navbar_list li:hover {
+    /* background-color: #f4f1ea; */
+    cursor: pointer;
+}
+
+.logout {
+    border: none;
 }
