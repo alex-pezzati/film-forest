@@ -1,7 +1,8 @@
 .navbar {
     display: flex;
     justify-content: center;
-    background-image: url('../images/5341781-vector-old-celluloid-film-tape.PNG');
+    /* background-image: url('../images/5341781-vector-old-celluloid-film-tape.PNG'); */
+    background-color: #184d47;
     background-size: contain;
     height: 75px;
 }
@@ -12,7 +13,7 @@
     width: 1100px;
 }
 
-.navbar_logo img{
+.navbar_logo img {
     width: 140px;
     height: 100%;
     object-fit: fill;
@@ -23,6 +24,7 @@
     display: flex;
     align-items: center;
 }
+
 
 /* Style the input fields */
 
@@ -68,19 +70,21 @@
     cursor: pointer;
 }
 
+form button:hover {
+    background-color: rgb(155, 172, 222);
+}
+
 .container {
     display: grid;
     grid-template-columns: 15% 1fr 1fr 1fr 15%;
     grid-template-rows: auto;
-    grid-template-areas:
-    "headerLeft header header header headerRight"
-    "leftBanner mainBanner mainBanner registerForm rightBanner" "leftFirst main main main rightFirst"
-    "leftSecond mainSecond mainSecond mainSecond rightSecond" "footer footer footer footer footer";
+    grid-template-areas: "headerLeft header header header headerRight" "leftBanner mainBanner mainBanner registerForm rightBanner" "leftFirst main main main rightFirst" "leftSecond mainSecond mainSecond mainSecond rightSecond" "footer footer footer footer footer";
 }
 
 .navBarLeft {
     grid-area: headerLeft;
-    background-image: url('../images/5341781-vector-old-celluloid-film-tape.PNG');
+    /* background-image: url('../images/5341781-vector-old-celluloid-film-tape.PNG'); */
+    background-color: #184d47;
     background-size: cover;
 }
 
@@ -90,7 +94,8 @@
 
 .navBarRight {
     grid-area: headerRight;
-    background-image: url('../images/5341781-vector-old-celluloid-film-tape.PNG');
+    /* background-image: url('../images/5341781-vector-old-celluloid-film-tape.PNG'); */
+    background-color: #184d47;
     background-size: cover;
 }
 
@@ -124,7 +129,7 @@
 
 .first-left-margin {
     grid-area: leftFirst;
-    background:#d4d2cc;
+    background: #d4d2cc;
 }
 
 .movie-info1 {
@@ -136,7 +141,7 @@
 
 .first-right-margin {
     grid-area: rightFirst;
-    background:#d4d2cc;
+    background: #d4d2cc;
 }
 
 .second-left-margin {

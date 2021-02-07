@@ -9,10 +9,11 @@
     margin-bottom: 50px;
 }
 
-.login-form{
+.login-form {
     border-radius: 10px;
     padding: 10px;
-    background-color: rgb(244, 241, 234, .85);;
+    background-color: rgb(244, 241, 234, .85);
+    ;
 }
 
 div input {
@@ -20,12 +21,13 @@ div input {
     justify-content: right;
 }
 
-form {
-    border: 2px solid black;
-    border-radius: 10px;
-}
 
-.button {
+/* form {
+    border-radius: 10px;
+} */
+
+
+/* .button {
     color: #ffffff;
     padding: 8px;
     border: 0px;
@@ -34,10 +36,10 @@ form {
     font-size: 18px;
     line-height: 22px;
     width: 85px;
-}
+} */
 
 .alert-danger {
-    color:  red;
+    color: red;
     border: 2px solid black;
     border-radius: 10px;
     text-align: center;

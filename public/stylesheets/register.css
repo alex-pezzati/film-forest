@@ -24,10 +24,10 @@ div input {
     justify-content: right;
 }
 
-form {
-    border: 2px solid black;
+
+/* form {
     border-radius: 6px;
-}
+} */
 
 .register-form {
     border-radius: 10px;
@@ -36,7 +36,8 @@ form {
     ;
 }
 
-.button {
+
+/* .button {
     padding: 8px;
     border: 0px;
     border-radius: 4px;
@@ -45,7 +46,7 @@ form {
     line-height: 22px;
     width: 85px;
     cursor: pointer;
-}
+} */
 
 .alert-danger {
     color: red;
