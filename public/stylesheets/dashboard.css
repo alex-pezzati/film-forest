@@ -1,3 +1,12 @@
+.movieTop{
+    height: 10px;
+    width: 100%;
+    background: #184D47;
+}
+
+body {
+    background: #e9f4e7
+}
 .container {
   height: 90vh;
   /* margin: 2rem; */
@@ -12,13 +21,19 @@
   color: white;
   font-size: 2rem;
   text-align: center;
-  padding-top: 2rem;
+  padding-top: 1rem;
 }
 
 .cell-2 {
     display: inline-block;
-    width: 200px;
+    width: 188px;
     text-align: left;
+    background: #184d47;
+    padding-left: 10px;
+    margin-right: 6px;
+    height: 15%;
+    margin-top: 17px;
+    border-radius: 4px;
 }
 .cell-3 {
     display: inline-block;
@@ -77,4 +92,14 @@ table.GeneratedTable thead {
 .myTable td:nth-child(1) {
     width: 79px;
     padding-right: 5px;
+}
+
+.tbody {
+    font-size: large;
+}
+
+.div1 {
+    font-size: 20px;
+    font-family: arial;
+    font-weight: 500;
 }
