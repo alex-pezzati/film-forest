@@ -50,7 +50,7 @@ router.get('/watched', asyncHandler(async (req, res) => {
     const myDashboards = await Dashboard.findAll({
         where: {
             userId: res.locals.user.id,
-            name: 'Have Watched'
+            name: 'Watched'
         }
     });
 
