@@ -1,26 +1,27 @@
-.movieBody{
+.movieBody {
     background: #e8f6e7;
 }
 
-.movieTop{
+.movieTop {
     height: 10px;
     width: 100%;
     background: #184D47;
 }
+
 .movie-div {
     height: 500px;
     display: grid;
     grid-template-columns: 5%;
     grid-template-rows: 10% 15% 15% 5% 5% 5% 20% 25%;
-    grid-template-areas: 
-    ". . . ."
-    ". image title ."
-    ". image title ."
-    ". image genre ."
-    ". . release ."
-    ". . ratings ."
-    ". addM description ."
-    ". . . .";
+    grid-template-areas:
+        ". . . ."
+        ". image title ."
+        ". image title ."
+        ". image genre ."
+        ". . release ."
+        ". . ratings ."
+        ". addM description ."
+        ". . . .";
     margin: 280px;
     margin-top: 3%;
     margin-bottom: 0%;
@@ -30,7 +31,7 @@
     padding-right: 40px;
 }
 
-.selectB{
+.selectB {
     margin-left: 24px;
     margin-top: 100px;
 }
@@ -80,16 +81,16 @@
 }
 
 .movie-title {
-        padding-bottom: 0%;
-        font-family: Arial;
-        font-size: 50px;
-        margin-top: 49px;
+    padding-bottom: 0%;
+    font-family: Arial;
+    font-size: 50px;
+    margin-top: 49px;
 }
 
 .movie-genre {
-        font-family: Arial;
-        font-size: 20px;
-        margin-top: 10px;
+    font-family: Arial;
+    font-size: 20px;
+    margin-top: 10px;
 }
 
 .movie-release {
@@ -137,13 +138,13 @@
 }
 
 .single-review {
-        border-bottom: #aec8aa solid 1px;
-        padding: 10px;
-        margin-top: 10px;
-        margin-bottom: 5px;
-        margin-right: 80px;
-        display: flex;
-        flex-direction: column-reverse;
+    border-bottom: #aec8aa solid 1px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-right: 80px;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .user {
@@ -160,25 +161,27 @@
 }
 
 .reviews-div {
-       display: grid;
-       grid-template-columns: 10% 90%;
-       grid-template-rows: 20% 10% 60% 10%;
-       grid-template-areas: 
-       "userR userR"
-       "Rtop Rtop"
-       "Rleft singleR"
-       "Rleft Rbottom";
-       height: 300px;
-       margin-left: 280px;
-       margin-right: 280px;
-       margin-bottom: 55px;
-       border: solid #aec8aa 1px;
-       border-radius: 7px;
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 20% 10% 60% 10%;
+    grid-template-areas:
+        "userR userR"
+        "Rtop Rtop"
+        "Rleft singleR"
+        "Rleft Rbottom";
+    height: 300px;
+    margin-left: 280px;
+    margin-right: 280px;
+    margin-bottom: 55px;
+    border: solid #aec8aa 1px;
+    border-radius: 7px;
 }
-.Rtop{
- background: #e8f6e7;
- grid-area: Rtop;
+
+.Rtop {
+    background: #e8f6e7;
+    grid-area: Rtop;
 }
+
 .userR {
     padding-left: 40%;
     padding-top: 15px;
