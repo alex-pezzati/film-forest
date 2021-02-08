@@ -1,11 +1,13 @@
-.reviewBody{
+.reviewBody {
     background: #e8f6e7;
 }
-.reviewTop{
-     height: 10px;
-     width: 100%;
-     background: #184D47;
+
+.reviewTop {
+    height: 10px;
+    width: 100%;
+    background: #184D47;
 }
+
 .movie-rev-div {
     padding-bottom: 0%;
     display: grid;
@@ -15,7 +17,7 @@
         ". . . . "
         ". revImage revTitle ."
         ". revImage revTitle ."
-        ". revImage  revGenre ."  
+        ". revImage  revGenre ."
         ". . revDescription ."
         ". . . .";
     margin: 280px;
@@ -27,14 +29,16 @@
     padding-right: 40px;
 }
 
-.movieImg{
+.movieImg {
     grid-area: revImage;
     margin-bottom: 30px;
 }
+
 .movie-rev-img {
-     border-radius: 7px;
-     border: black solid 1px;
+    border-radius: 7px;
+    border: black solid 1px;
 }
+
 .movieTitle {
     grid-area: revTitle;
     margin-left: 20px;
@@ -46,6 +50,7 @@
     font-size: 50px;
     margin-top: 49px;
 }
+
 .movieGenre {
     grid-area: revGenre;
     margin-left: 20px;
@@ -57,7 +62,7 @@
     margin-top: 40px;
 }
 
-.movieDes{
+.movieDes {
     grid-area: revDescription;
     margin-left: 20px;
     margin-bottom: -60px;
@@ -83,12 +88,13 @@
     border-radius: 0px;
     grid-area: reviewF;
 }
-.review{
+
+.review {
     display: grid;
     grid-template-columns: 15% 70% 15%;
     grid-template-rows: auto;
     grid-template-areas:
-    "leftS reviewF rightS";
+        "leftS reviewF rightS";
     height: 400px;
     padding-left: 50px;
     padding-right: 50px;
@@ -97,18 +103,19 @@
     margin-right: 280px;
     border: solid #aec8aa 1px;
     border-radius: 7px;
-    
+
 }
-.left-space{
+
+.left-space {
     grid-area: leftS;
     background: #e8f6e7;
     margin-bottom: 3px;
 }
 
-.top{
-     grid-area: top;
-     background: #e8f6e7;
-     
+.top {
+    grid-area: top;
+    background: #e8f6e7;
+
 }
 
 .right-space {
@@ -116,6 +123,7 @@
     background: #e8f6e7;
     margin-bottom: 3px;
 }
+
 .input-review {
     height: 300px;
     width: 90%;
