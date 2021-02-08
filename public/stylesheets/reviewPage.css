@@ -1,72 +1,71 @@
 .reviewBody{
     background: #e8f6e7;
 }
+.reviewTop{
+     height: 10px;
+     width: 100%;
+     background: #184D47;
+}
 .movie-rev-div {
-    padding: 50px;
     padding-bottom: 0%;
     display: grid;
-    grid-template-columns: 15% 1fr 3fr 15%;
-    grid-template-rows: 10% 10% 10% 10% 10% 40% 10%;
+    grid-template-columns: 5%;
+    grid-template-rows: 10% 15% 15% 15% 40% 5%;
     grid-template-areas:
-        "left . . right "
-        "left revImage . right"  
-        "left revImage . right"  
-        "left revImage revTitle right"  
-        "left revImage revGenre right"  
-        "left . revDescription right"
-        "bottom bottom bottom bottom";
-    margin: 50px;
-    margin-top: 0%;
+        ". . . . "
+        ". revImage revTitle ."
+        ". revImage revTitle ."
+        ". revImage  revGenre ."  
+        ". . revDescription ."
+        ". . . .";
+    margin: 280px;
+    margin-top: 3%;
     margin-bottom: 0%;
-}
-.movieBottom{
-  grid-area: bottom;
-  background: #32362D;
-}
-.movieLeft{
-    grid-area: left;
-    background: #32362D;
+    background: ghostwhite;
+    border: #aec8aa solid 1px;
+    border-radius: 8px;
+    padding-right: 40px;
 }
 
-.movieRight {
-    grid-area: right;
-    background: #32362D;
-}
 .movieImg{
     grid-area: revImage;
+    margin-bottom: 30px;
 }
 .movie-rev-img {
-    margin-bottom: 30px;
-    width: 250px;
-    height: 350px;
+     border-radius: 7px;
+     border: black solid 1px;
 }
 .movieTitle {
     grid-area: revTitle;
+    margin-left: 20px;
 }
 
 .movie-rev-title {
     padding-bottom: 0%;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Arial;
     font-size: 50px;
+    margin-top: 49px;
 }
 .movieGenre {
     grid-area: revGenre;
+    margin-left: 20px;
 }
 
 .movie-rev-genre {
-    padding-top: 20px;
-    padding-bottom: 5px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Arial;
     font-size: 20px;
+    margin-top: 40px;
 }
 
 .movieDes{
     grid-area: revDescription;
+    margin-left: 20px;
+    margin-bottom: -60px;
 }
 
 .movie-rev-description {
-    padding-top: 30px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-top: 34px;
+    font-family: Arial;
     font-size: 20px;
 }
 
@@ -87,40 +86,46 @@
 .review{
     display: grid;
     grid-template-columns: 15% 70% 15%;
-    grid-template-rows: 10% 90%;
+    grid-template-rows: auto;
     grid-template-areas:
-    "top top top"
     "leftS reviewF rightS";
+    height: 400px;
     padding-left: 50px;
     padding-right: 50px;
-    height: 440px;
     margin: 50px;
-    margin-top: 0%;
+    margin-left: 280px;
+    margin-right: 280px;
+    border: solid #aec8aa 1px;
+    border-radius: 7px;
     
 }
 .left-space{
     grid-area: leftS;
-    background: #d4d2cc;  
+    background: #e8f6e7;
+    margin-bottom: 3px;
 }
 
 .top{
      grid-area: top;
-     background: #d4d2cc;
+     background: #e8f6e7;
+     
 }
 
 .right-space {
     grid-area: rightS;
-    background: #d4d2cc
+    background: #e8f6e7;
+    margin-bottom: 3px;
 }
 .input-review {
     height: 300px;
     width: 90%;
     justify-self: center;
     align-self: center;
-    border: 1px solid #888;
-    background-color:rgb(244, 241, 234, .85);
+    border: #aec8aa solid 1px;
+    border-radius: 4px;
+    background: ghostwhite;
     resize: none;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Arial;
     font-size: 18px;
 }
 
@@ -131,7 +136,7 @@
     align-self: center;
     margin: 20px;
     border-radius: 4px;
-    background-color: #382110;
+    background-color: #0b3507;
     color: #ffffff;
     font-size: 16px;
 }
@@ -140,5 +145,5 @@
     align-self: center;
     font-size: 30px;
     padding-bottom: 20px;
-    margin-top: 20px;
+    margin-top: 10px;
 }

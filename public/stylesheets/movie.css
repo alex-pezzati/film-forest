@@ -11,14 +11,15 @@
     display: grid;
     grid-template-columns: 5%;
     grid-template-rows: 10% 15% 15% 5% 5% 5% 20% 25%;
-    grid-template-areas: ". . . ."
+    grid-template-areas: 
+    ". . . ."
     ". image title ."
     ". image title ."
     ". image genre ."
     ". . release ."
     ". . ratings ."
-    ". . description ."
-    ". addM description .";
+    ". addM description ."
+    ". . . .";
     margin: 280px;
     margin-top: 3%;
     margin-bottom: 0%;
@@ -29,48 +30,52 @@
 }
 
 .selectB{
-    margin-left: 15px;
+    margin-left: 24px;
+    margin-top: 100px;
 }
 
 .addToList {
     grid-area: addM;
-    padding-top: 10px;
-    padding-left: 20%;
+    padding-left: 12%;
     padding-right: 20%;
+    margin-top: -35px;
 }
 
 .title {
     grid-area: title;
+    padding-left: 10px;
+    padding-top: 50px;
 }
 
 .img {
     grid-area: image;
+    padding-left: 10px;
 }
 
 .genre {
     grid-area: genre;
+    padding-left: 10px;
 }
 
 .release {
     grid-area: release;
     margin-top: 10px;
+    padding-left: 10px;
 }
 
 .ratings {
     grid-area: ratings;
+    padding-left: 10px;
 }
 
 .description {
     grid-area: description;
+    padding-left: 10px;
 }
 
 .movie-img {
-    padding: 30px;
-    padding-top: 10px;
-    padding-bottom: 17px;
-    width: 242px;
-    height: 330px;
-    border-radius: 4px;
+    border-radius: 7px;
+    border: black solid 1px;
 }
 
 .movie-title {
