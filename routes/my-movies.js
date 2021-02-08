@@ -6,10 +6,7 @@ const router = express.Router()
 router.get('/', asyncHandler(async (req, res) => {
     // by default grab 'My Movies' user dashboard
     const myDashboards = await Dashboard.findAll({
-        where: {
-            userId: res.locals.user.id,
-            name: 'My Movies'
-        }
+        userId: res.locals.user.id
     });
 
     const dashboardId = myDashboards[0].id;
@@ -18,7 +15,7 @@ router.get('/', asyncHandler(async (req, res) => {
         where: {
             dashboardId
         }
-    })
+    });
 
     const movies = await Movie.findAll();
 
@@ -61,7 +58,7 @@ router.get('/watched', asyncHandler(async (req, res) => {
         where: {
             dashboardId
         }
-    })
+    });
 
     const movies = await Movie.findAll();
 
@@ -83,30 +80,36 @@ router.post('/:id(\\d+)', asyncHandler(async (req, res) => {
 
 
 
-router.post('/delete/:id(\\d+)', asyncHandler(async (req, res) => {
-    console.log('IM INSIDE THIS FUNCTIONNNNNN!')
-    console.log(req.params.id)
+router.post('/delete/:dashboardId(\\d+)/:movieId(\\d+)', asyncHandler(async (req, res) => {
     await MoviesDashboard.destroy({
-        where: { movieId: req.params.id }
-    })
+        where: {
+            movieId: req.params.movieId,
+            dashboardId: req.params.dashboardId
+        }
+    });
 
     res.redirect('/my-movies');
-
 }));
 
-router.post('/to-watch/delete/:id(\\d+)', asyncHandler(async (req, res) => {
+router.post('/to-watch/delete/:dashboardId(\\d+)/:movieId(\\d+)', asyncHandler(async (req, res) => {
     await MoviesDashboard.destroy({
-        where: { movieId: req.params.id }
+        where: {
+            movieId: req.params.movieId,
+            dashboardId: req.params.dashboardId
+        }
     });
 
     res.redirect('/my-movies/to-watch');
 
 }));
 
-router.post('/watched/delete/:id(\\d+)', asyncHandler(async (req, res) => {
+router.post('/watched/delete/:dashboardId(\\d+)/:movieId(\\d+)', asyncHandler(async (req, res) => {
     await MoviesDashboard.destroy({
-        where: { movieId: req.params.id }
-    })
+        where: {
+            movieId: req.params.movieId,
+            dashboardId: req.params.dashboardId
+        }
+    });
 
     res.redirect('/movies/watched');
 }));

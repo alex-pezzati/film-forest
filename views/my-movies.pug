@@ -34,6 +34,10 @@ block content
                                         span= Math.floor(movie.totalRating * 100)+'%'
                                     td.genre= movie.genre
                                                 table.GeneratedTable.sortable
-                                    td: a(href="")
-                                    td: form(action=`/my-movies/delete/${movie.id}` method="post")
+                                    td: form(method="post" action=`/my-movies/${movie.id}`)
+                                            select.selectB(name="dashboardId" onChange="this.form.submit()")
+                                                option(value='')= ''
+                                                each dashboard in myDashboards
+                                                    option(value=dashboard.id)= dashboard.name
+                                    td: form(action=`/my-movies/delete/${savedMovie.dashboardId}/${movie.id}` method="post")
                                             button.deleteButton(type="submit") X
