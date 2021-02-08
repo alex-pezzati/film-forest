@@ -4,10 +4,10 @@ block content
     .container
         .cell.cell-2
             ul
-                div My Movies
-                div Watched
-                div Want to watch
-        .cell.cell-3 
+                div: a(href="/my-movies") My Movies
+                div: a(href="/my-movies/to-watch") To Watch
+                div: a(href="/my-movies/watched") Watched
+        .cell.cell-3
             table.GeneratedTable.sortable.myTable
                 thead
                     tr
@@ -34,6 +34,10 @@ block content
                                         span= Math.floor(movie.totalRating * 100)+'%'
                                     td.genre= movie.genre
                                                 table.GeneratedTable.sortable
-
-                                    //- td: button.deleteButton(id=`${savedMovie.movieId}` type="button") X
-    
+                                    td: form(method="post" action=`/my-movies/${movie.id}`)
+                                            select.selectB(name="dashboardId" onChange="this.form.submit()")
+                                                option(value='')= ''
+                                                each dashboard in myDashboards
+                                                    option(value=dashboard.id)= dashboard.name
+                                    td: form(action=`/my-movies/delete/${savedMovie.dashboardId}/${movie.id}` method="post")
+                                            button.deleteButton(type="submit") X
