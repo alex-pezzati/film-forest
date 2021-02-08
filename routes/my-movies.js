@@ -9,11 +9,13 @@ router.get('/', asyncHandler(async (req, res) => {
         userId: res.locals.user.id
     });
 
-    const dashboardId = myDashboards[0].id;
+    const dashboardId = [ myDashboards[0].id, myDashboards[1].id, myDashboards[2].id];
+
+    console.log(dashboardId, 'THIS SHOULD BE AN ARRAY')
 
     const myDashboardMovies = await MoviesDashboard.findAll({
         where: {
-            dashboardId
+            dashboardId: dashboardId,
         }
     });
 
@@ -75,7 +77,7 @@ router.post('/:id(\\d+)', asyncHandler(async (req, res) => {
         movieId: req.params.id
     });
 
-    res.redirect(`/movies/${movieId}`);
+    res.redirect(`/my-movies`);
 }));
 
 

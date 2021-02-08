@@ -6,10 +6,10 @@ block content
         .container
             .cell.cell-2
                 ul.ul
-                    div.div1 My Movies
-                    div.div1 Watched
-                    div.div1 Want to watch
-            .cell.cell-3 
+                    div.div1: a(href="/my-movies") My Movies
+                    div.div1: a(href="/my-movies/watched") Watched
+                    div.div1: a(href="/my-movies/to-watch") To Watch
+            .cell.cell-3
                 table.GeneratedTable.sortable.myTable
                     thead
                         tr
@@ -37,12 +37,9 @@ block content
                                         td.genre= movie.genre
                                                     table.GeneratedTable.sortable
                                         td: form(method="post" action=`/my-movies/${movie.id}`)
-                                              select.selectB(name="dashboardId" onChange="this.form.submit()")
+                                              select(name="dashboardId" onChange="this.form.submit()")
                                                   option(value='')= ''
                                                   each dashboard in myDashboards
                                                       option(value=dashboard.id)= dashboard.name
                                         td: form(action=`/my-movies/delete/${savedMovie.dashboardId}/${movie.id}` method="post")
                                               button.deleteButton(type="submit") X
-
-
-    

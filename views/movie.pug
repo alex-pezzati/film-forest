@@ -1,7 +1,7 @@
 extends layout.pug
 
 block content
-  body.movieBody 
+  body.movieBody
     div.movieTop
     div.movie-div
       cell.mtop
@@ -25,7 +25,7 @@ block content
       cell.addToList
         //- button(type='submit' class='add-movie') Add to My Movie
         //- if dashboards
-        form(method="post" action=`/my-movies/${movie.id}`)
+        form(method="post" action=`/movies/${movie.id}`)
           select.selectB(name="dashboardId" onChange="this.form.submit()")
             option(value='')= ''
             each dashboard in dashboards
@@ -39,7 +39,7 @@ block content
             a(href=`/reviews/${movie.id}`) Leave a review here!!
     div.reviews-div
       cell.Rleft
-      cell.Rtop 
+      cell.Rtop
       cell.singleR
         if reviews
           each review in reviews
@@ -49,7 +49,7 @@ block content
                 if user.id===review.userId
                   div.user= user.firstName
       cell.userR
-        label.user-reviews Community Reviews 
+        label.user-reviews Community Reviews
       cell.Rright
       cell.Rbottom
     div.pageBottom
