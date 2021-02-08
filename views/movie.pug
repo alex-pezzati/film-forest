@@ -1,55 +1,51 @@
 extends layout.pug
 
 block content
-  body.movieBody 
-    div.movieTop
-    div.movie-div
+    div(class="movie-div")
       cell.mtop
       cell.mleft
       cell.img
         img(class="movie-img" src=`${movie.movieUrl}`)
       cell.title
-        div.movie-title= movie.title
+        div(class="movie-title")= movie.title
       cell.genre
-        div.movie-genre= movie.genre
+        div(class="movie-genre")= movie.genre
       cell.release
-        div.movie-release= 'Release  ' + movie.releaseDate.toDateString()
+        div(class="movie-release")= 'Release  ' + movie.releaseDate.toDateString()
       cell.ratings
-        div.movie-ratings= Math.floor(movie.totalRating * 100)+'%'
+        div(class="movie-ratings")= Math.floor(movie.totalRating * 100)+'%'
           if movie.totalRating > .70
-            span.fire=  '🔥'
+            div(class="fire")=  '🔥'
           if movie.totalRating < .69
-            span.Disaster= '🌪'
+            div(class="Disaster")= '🌪'
       cell.description
-        div.movie-description= movie.description
+        div(class="movie-description")= movie.description
       cell.addToList
         //- button(type='submit' class='add-movie') Add to My Movie
         //- if dashboards
         form(method="post" action=`/my-movies/${movie.id}`)
-          select.selectB(name="dashboardId" onChange="this.form.submit()")
+          select(name="dashboardId" onChange="this.form.submit()")
             option(value='')= ''
             each dashboard in dashboards
               option(value=dashboard.id)= dashboard.name
           //- button(type='submit' class="review-button") Add to your movies!
       cell.mright
-    div.review-div
+    div(class="review-div")
       if locals.authenticated
-        label.review-label Want to leave a review?
-          button.review-button(type='submit')
+        label(class="review-label") Want to leave a review?
+          button(type='submit' class="review-button")
             a(href=`/reviews/${movie.id}`) Leave a review here!!
-    div.reviews-div
+    div(class='reviews-div')
       cell.Rleft
-      cell.Rtop 
       cell.singleR
         if reviews
           each review in reviews
-            div.single-review
-              div.movie-reviews= review.review
+            div(class='single-review')
+              div(class='movie-reviews')= review.review
               each user in users
                 if user.id===review.userId
-                  div.user= user.firstName
+                  div(class='user')= user.firstName
       cell.userR
-        label.user-reviews Community Reviews 
+        label(class="user-reviews") Community Reviews
       cell.Rright
       cell.Rbottom
-    div.pageBottom
