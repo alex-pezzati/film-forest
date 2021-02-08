@@ -1,5 +1,5 @@
 html {
-    background: #184d47;
+    background: #e9f4e7;
 }
 
 .login-container {
@@ -16,10 +16,11 @@ html {
 }
 
 .login-form {
+    border: 2px solid black;
     border-radius: 10px;
     padding: 10px;
     background-color: rgb(244, 241, 234, .85);
-    margin-left: 110px
+    margin-left: 100px
 }
 
 div input {
@@ -59,3 +60,17 @@ div input {
     margin: 25px;
 }
 
+.formButton {
+        text-align: center;
+    margin-left: -5px;
+    color: #ffffff;
+    padding: 5px;
+    border: 0px;
+    border-radius: 4px;
+    background-color: #0b3507;
+    font-size: 18px;
+    line-height: 23px;
+    /* width: 15%; */
+    cursor: pointer;
+    margin-left: 1px
+}

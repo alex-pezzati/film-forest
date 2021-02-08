@@ -72,6 +72,21 @@
     cursor: pointer;
 }
 
+.buttonRegister {
+    text-align: center;
+    margin-left: -5px;
+    color: #ffffff;
+    padding: 5px;
+    border: 0px;
+    border-radius: 4px;
+    background-color: #0b3507;
+    font-size: 18px;
+    line-height: 23px;
+    /* width: 15%; */
+    cursor: pointer;
+    margin-right: 21px;
+}
+
 .navbar_list li {
     font-weight: 800;
     /* background-color: rgb(244, 241, 234, .4); */
