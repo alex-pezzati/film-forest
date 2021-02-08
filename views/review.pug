@@ -4,24 +4,26 @@ include utils.pug
 
 block content
   body.reviewBody
-    div(class="movie-rev-div")
+    div.reviewTop
+    div.movie-rev-div
       cell.movieLeft
       cell.movieImg 
         img(class="movie-rev-img" src=`${movie.movieUrl}`)
       cell.movieTitle
-        div(class="movie-rev-title")= movie.title
+        div.movie-rev-title= movie.title
       cell.movieGenre
-        div(class="movie-rev-genre")= movie.genre
+        div.movie-rev-genre= movie.genre
       cell.movieDes
-        div(class="movie-rev-description")= movie.description
+        div.movie-rev-description= movie.description
       cell.movieRight
       cell.movieBottom
-    div(class="review")
+    div.review
       cell.top
       cell.left-space 
-      form(method="post" action=`/reviews/${movie.id}` class='review-form')
-        label(class='leave-review')= 'Leave Review Here'
-        textarea(name="review" class="input-review")
-        button(type="submit" class='submit-buddon') Post Review
+      form.review-form(method="post" action=`/reviews/${movie.id}`)
+        label.leave-review= 'Leave Review Here'
+        textarea.input-review(name="review")
+        button.submit-buddon(type="submit") Post Review
           //- a(href=`/movies/${movie.id}`) Submit review
       cell.right-space 
+    div.pageBottom 
