@@ -1,5 +1,5 @@
 const express = require('express')
-const { Movie, Review, Dashboard, Vote, User, Sequelize  } = require('../db/models')
+const { Movie, Review, Dashboard, MoviesDashboard, Vote, User, Sequelize  } = require('../db/models')
 const { asyncHandler, csrfProtection } = require('./utils.js');
 const router = express.Router()
 
@@ -23,6 +23,17 @@ router.get('/:id(\\d+)', asyncHandler(async (req, res) => {
         res.render('movie', { title: movie.title, dashboards, movie, reviews, users })
     }
 }))
+
+router.post('/:id(\\d+)', asyncHandler(async (req, res) => {
+    const movieId = req.params.id;
+
+    await MoviesDashboard.create({
+        dashboardId: req.body.dashboardId,
+        movieId: req.params.id
+    });
+
+    res.redirect(`/movies/${movieId}`);
+}));
 
 
 module.exports = router

@@ -14,8 +14,8 @@ body {
   justify-content: center;
   /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto; */
-  grid-template-areas: 
-  "space sideBar table table space2" 
+  grid-template-areas:
+  "space sideBar table table space2"
 }
 .cell {
   color: white;
@@ -31,7 +31,7 @@ body {
     background: #184d47;
     padding-left: 10px;
     margin-right: 6px;
-    height: 15%;
+    height: 13%;
     margin-top: 17px;
     border-radius: 4px;
 }
