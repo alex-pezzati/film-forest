@@ -22,7 +22,7 @@ router.get('/', asyncHandler(async (req, res) => {
 
     const movies = await Movie.findAll();
 
-    res.render('my-movies', { myDashboardMovies, movies });
+    res.render('my-movies', { myDashboards, myDashboardMovies, movies });
 }));
 
 
@@ -44,7 +44,7 @@ router.get('/to-watch', asyncHandler(async (req, res) => {
 
     const movies = await Movie.findAll();
 
-    res.render('my-movies', { myDashboardMovies, movies });
+    res.render('my-movies', { myDashboards, myDashboardMovies, movies });
 }));
 
 router.get('/watched', asyncHandler(async (req, res) => {
@@ -65,30 +65,50 @@ router.get('/watched', asyncHandler(async (req, res) => {
 
     const movies = await Movie.findAll();
 
-    res.render('my-movies', { myDashboardMovies, movies });
+    res.render('my-movies', { myDashboards, myDashboardMovies, movies });
 }));
 
 
 
 router.post('/:id(\\d+)', asyncHandler(async (req, res) => {
     const movieId = req.params.id;
-    // const dashboardId = req.body;
 
-    // console.log('IM INSIDE THIS POST!!!!!!!!!!!!!!!!!!')
-    // console.log(movieId)
-    // console.log(req.body.dashboardId)
-        await MoviesDashboard.create({
-            dashboardId: req.body.dashboardId,
-            movieId: req.params.id
-        });
-
+    await MoviesDashboard.create({
+        dashboardId: req.body.dashboardId,
+        movieId: req.params.id
+    });
 
     res.redirect(`/movies/${movieId}`);
 }));
 
-router.delete('/:id(\\d+)', asyncHandler(async (req, res) => {
 
 
+router.post('/delete/:id(\\d+)', asyncHandler(async (req, res) => {
+    console.log('IM INSIDE THIS FUNCTIONNNNNN!')
+    console.log(req.params.id)
+    await MoviesDashboard.destroy({
+        where: { movieId: req.params.id }
+    })
+
+    res.redirect('/my-movies');
+
+}));
+
+router.post('/to-watch/delete/:id(\\d+)', asyncHandler(async (req, res) => {
+    await MoviesDashboard.destroy({
+        where: { movieId: req.params.id }
+    });
+
+    res.redirect('/my-movies/to-watch');
+
+}));
+
+router.post('/watched/delete/:id(\\d+)', asyncHandler(async (req, res) => {
+    await MoviesDashboard.destroy({
+        where: { movieId: req.params.id }
+    })
+
+    res.redirect('/movies/watched');
 }));
 
 
