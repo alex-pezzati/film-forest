@@ -1,4 +1,4 @@
-const express = require('express')
+const express = require('express');
 const { Movie, Review, Dashboard, MoviesDashboard, Vote, User, Sequelize  } = require('../db/models')
 const { asyncHandler, csrfProtection } = require('./utils.js');
 const router = express.Router()
@@ -9,11 +9,13 @@ router.get('/:id(\\d+)', asyncHandler(async (req, res) => {
     const movie = await Movie.findByPk( movieId, { include:  Review })
     const reviews = movie.Reviews
 
-    const dashboards = await Dashboard.findAll({
-        where: {
-            userId: res.locals.user.id
-        }
-    });
+    if (res.locals.authenticated) {
+        var dashboards = await Dashboard.findAll({
+            where: {
+                userId: res.locals.user.id
+            }
+        });
+    }
 
     if(reviews.length === 0) {
         res.render('movie', { dashboards, movie })
@@ -22,7 +24,7 @@ router.get('/:id(\\d+)', asyncHandler(async (req, res) => {
 
         res.render('movie', { title: movie.title, dashboards, movie, reviews, users })
     }
-}))
+}));
 
 router.post('/:id(\\d+)', asyncHandler(async (req, res) => {
     const movieId = req.params.id;
