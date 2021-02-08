@@ -11,7 +11,7 @@
 .navbar_container {
     display: flex;
     justify-content: space-between;
-    width: 1100px;
+    width: 70%;
 }
 
 .navbar_logo img {
@@ -75,6 +75,8 @@
 
 .formClass {
     margin-left: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .button {
@@ -155,10 +157,12 @@ form button:hover {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     grid-area: mainBanner;
     background: #184D47;
-    background-image: url('../images/movie_reel.png');
-    background-size: 60%;
+    background-image: url(../images/movie_reel.png);
+    background-size: 100% 118%;
     background-position: center;
     background-repeat: no-repeat;
+    /* width: 626px; */
+    height: 277px;
 }
 
 .register {
